@@ -13,6 +13,7 @@
   <ItemGroup>
     <ClCompile Include="CarGameCode\Control\ViewController.cpp" />
     <ClCompile Include="CarGameCode\Logic\Game.cpp" />
+    <ClCompile Include="CarGameCode\Logic\GameObjects\BadObject.cpp" />
     <ClCompile Include="CarGameCode\Logic\GameObjects\Car.cpp" />
     <ClCompile Include="CarGameCode\Logic\GameObjects\Meta.cpp" />
     <ClCompile Include="CarGameCode\Logic\GameObjects\Wall.cpp" />
@@ -20,16 +21,46 @@
     <ClCompile Include="CarGameCode\View\Texture.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="CarGameCode\Control\CommandFactory.h" />
     <ClInclude Include="CarGameCode\Control\ViewController.h" />
     <ClInclude Include="CarGameCode\Logic\Game.h" />
+    <ClInclude Include="CarGameCode\Logic\GameObjectContainer.h" />
+    <ClInclude Include="CarGameCode\Logic\GameObjectGenerator.h" />
+    <ClInclude Include="CarGameCode\Logic\GameObjects\BadObject.h" />
     <ClInclude Include="CarGameCode\Logic\GameObjects\Car.h" />
+    <ClInclude Include="CarGameCode\Logic\GameObjects\Collider.h" />
+    <ClInclude Include="CarGameCode\Logic\GameObjects\GameObject.h" />
     <ClInclude Include="CarGameCode\Logic\GameObjects\Meta.h" />
     <ClInclude Include="CarGameCode\Logic\GameObjects\Wall.h" />
     <ClInclude Include="CarGameCode\Utils\Vector2D.h" />
     <ClInclude Include="CarGameCode\View\Box.h" />
     <ClInclude Include="CarGameCode\View\Font.h" />
+    <ClInclude Include="CarGameCode\View\Infobar.h" />
     <ClInclude Include="CarGameCode\View\Texture.h" />
     <ClInclude Include="CarGameCode\View\TextureContainer.h" />
+    <ClInclude Include="checkML.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="CarGameCode\Images\barrel.png" />
+    <Image Include="CarGameCode\Images\bullet.png" />
+    <Image Include="CarGameCode\Images\car.png" />
+    <Image Include="CarGameCode\Images\coin.png" />
+    <Image Include="CarGameCode\Images\goal.png" />
+    <Image Include="CarGameCode\Images\oil.png" />
+    <Image Include="CarGameCode\Images\powerUp.png" />
+    <Image Include="CarGameCode\Images\rock.png" />
+    <Image Include="CarGameCode\Images\superrock.png" />
+    <Image Include="CarGameCode\Images\truck.png" />
+    <Image Include="CarGameCode\Images\turbo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CarGameCode\Control\.DS_Store" />
+    <None Include="CarGameCode\Images\.DS_Store" />
+    <None Include="CarGameCode\Logic\.DS_Store" />
+    <None Include="CarGameCode\Logic\GameObjects\.DS_Store" />
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="CarGameCode\Images\Monospace.ttf" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{28A4C5CD-307A-4FE6-81E4-4CE1F1E49AB4}</ProjectGuid>
