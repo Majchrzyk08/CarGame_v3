@@ -1,6 +1,5 @@
 #include "BadObject.h"
-
-// TODO: add includes
+#include "../Game.h"
 
 void  BadObject::onEnter(){
     instances += 1;

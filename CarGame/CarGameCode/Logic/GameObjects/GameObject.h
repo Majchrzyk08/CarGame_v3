@@ -1,7 +1,9 @@
 #ifndef CARGAME_GAMEOBJECT_H
 #define CARGAME_GAMEOBJECT_H
 
-// TODO: add includes
+#include "Collider.h"
+#include "../../Utils/Vector2D.h"
+#include "../../View/Texture.h"
 
 class Game;
 
