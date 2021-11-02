@@ -99,7 +99,7 @@ public:
     void carUpNdown(int i);
     void carAccNdec(int i);
 
-    void switchDebug();
+    void switchDebug() { debug_ = !debug_; }
 };
 
 

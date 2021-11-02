@@ -35,6 +35,9 @@
     <ClCompile Include="CarGameCode\Logic\GameObjects\BadObject.cpp">
       <Filter>Archivos de código fuente</Filter>
     </ClCompile>
+    <ClCompile Include="CarGameCode\Logic\GameObjects\GameObject.cpp">
+      <Filter>Archivos de código fuente</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CarGameCode\Logic\Game.h" />

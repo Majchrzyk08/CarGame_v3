@@ -15,6 +15,7 @@
     <ClCompile Include="CarGameCode\Logic\Game.cpp" />
     <ClCompile Include="CarGameCode\Logic\GameObjects\BadObject.cpp" />
     <ClCompile Include="CarGameCode\Logic\GameObjects\Car.cpp" />
+    <ClCompile Include="CarGameCode\Logic\GameObjects\GameObject.cpp" />
     <ClCompile Include="CarGameCode\Logic\GameObjects\Meta.cpp" />
     <ClCompile Include="CarGameCode\Logic\GameObjects\Wall.cpp" />
     <ClCompile Include="CarGameCode\Main.cpp" />

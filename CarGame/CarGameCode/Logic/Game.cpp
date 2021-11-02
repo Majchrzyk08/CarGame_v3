@@ -116,6 +116,11 @@ void Game::draw(){
         car->draw();
         goal_->draw();
         for (Wall* w : obstacles_)w->draw();
+        if (debug_) {
+            car->drawDebug();
+            for (Wall* w : obstacles_)w->drawDebug();
+            goal_->drawDebug();
+        }
         drawInfo();
         break;
     case GAMEOVER:
@@ -307,13 +312,4 @@ void Game::carUpNdown(int i) {
 
 void Game::carAccNdec(int i) {
     car->accelerateNdecelerate(i);
-}
-
-void Game::switchDebug() {
-    if (currentState_ == RUNNING) {
-        debug_ = !debug_;
-        car->switchDebug();
-        goal_->switchDebug();
-        for (Wall* w : obstacles_)w->switchDebug();
-    }
 }

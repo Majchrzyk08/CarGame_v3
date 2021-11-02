@@ -11,8 +11,9 @@ class Game;
 #include "../../Utils/Vector2D.h"
 #include "../../View/Texture.h"
 #include "../../View/Box.h"
+#include "GameObject.h"
 
-class Car {
+class Car : public GameObject{
 
 private:
 
@@ -22,12 +23,6 @@ private:
     const int MAX_SPEED = 10;
     const int INITIAL_POWER = 3;
 
-    Point2D<double> pos;
-    int w, h;
-    Game *game;
-    Texture *texture;
-    bool debug_ = false;
-
     //variables para movimiento
     double vel_ = 0;
     int vmove = 0;
@@ -35,31 +30,19 @@ private:
     //no se si es lo correcto pero como la otra es constante y no la puedo cambiar pues toca crear otra
     int power_ = INITIAL_POWER;
 
-    //metodos que he puesto privados porque creo que estan mejor siendo privados
-    void drawTexture(Texture* texture); //en este caso no creo que este tenga sentido que sea publico porque claramente es un metodo de herencia
 public:
     Car(Game *game);
     ~Car();
 
-    void draw();
-    void update();
+    virtual void draw();
+    virtual void update();
 
-    void setDimension(int width, int height);
-
-    double getX() {return pos.getX();};
-    double getY() {return pos.getY();};
-    int getWidth() {return w;};
-    int getHeight() {return h;};
     double getVel() { return vel_; }
     int getPower() { return power_; }
 
-    void setPosition(double x, double y);
-
-    SDL_Rect getCollider();
-
     void gotHit();
 
-    void switchDebug() { debug_ = !debug_; }
+    virtual SDL_Rect getCenter();
 
     //para cambiar la posicion
     void upNdown(int i);
