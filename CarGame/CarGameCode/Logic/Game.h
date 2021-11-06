@@ -18,6 +18,8 @@
 #include "GameObjects/Wall.h"
 #include "GameObjects/Meta.h"
 
+#include "GameObjectContainer.h"
+
 enum state_ {MENU, RUNNING, GAMEOVER};
 
 using namespace std;
@@ -39,8 +41,9 @@ private:
     float record_;
     Meta* goal_ = nullptr;
 
+    GameObjectContainer* container = nullptr;
+
     int nObstacles_;
-    vector<Wall*> obstacles_; //a futuro cambiar esto a gameobjects
     
     TextureContainer *textureContainer;
     SDL_Renderer* renderer = nullptr;
@@ -51,7 +54,6 @@ private:
     int level_ = 0;
 
     void createObstacles();
-    void clearObstacles();
 
     void drawInfo();
     void drawMenu();

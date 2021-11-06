@@ -36,3 +36,7 @@ SDL_Rect GameObject::getCenter() {
         getWidth() / 10,getWidth() / 10
     };
 }
+
+bool GameObject::collide(SDL_Rect other) {
+    return SDL_HasIntersection(&getCollider(), &other);
+}

@@ -9,7 +9,4 @@ D:\UniversidadPDFs\TPV1\Esta vez de verdad\P2\CarGame\CarGameCode\Logic\GameObje
           [
               T=double
           ]
-D:\UniversidadPDFs\TPV1\Esta vez de verdad\P2\CarGame\CarGameCode\Logic\Game.cpp(38,23): warning C4018: '<': no coinciden signed/unsigned
-D:\UniversidadPDFs\TPV1\Esta vez de verdad\P2\CarGame\CarGameCode\Logic\Game.cpp(42,22): warning C4018: '<': no coinciden signed/unsigned
-D:\UniversidadPDFs\TPV1\Esta vez de verdad\P2\CarGame\CarGameCode\Logic\Game.cpp(81,12): warning C4018: '<': no coinciden signed/unsigned
   CarGame.vcxproj -> D:\UniversidadPDFs\TPV1\Esta vez de verdad\P2\bin\CarGamePr1Debug.exe

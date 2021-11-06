@@ -13,6 +13,7 @@
   <ItemGroup>
     <ClCompile Include="CarGameCode\Control\ViewController.cpp" />
     <ClCompile Include="CarGameCode\Logic\Game.cpp" />
+    <ClCompile Include="CarGameCode\Logic\GameObjectContainer.cpp" />
     <ClCompile Include="CarGameCode\Logic\GameObjects\BadObject.cpp" />
     <ClCompile Include="CarGameCode\Logic\GameObjects\Car.cpp" />
     <ClCompile Include="CarGameCode\Logic\GameObjects\GameObject.cpp" />

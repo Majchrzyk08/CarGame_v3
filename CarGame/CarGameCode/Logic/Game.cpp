@@ -12,44 +12,29 @@ Game::Game(string name, int width, int height, int roadLength, int obstacles) {
     doExit = false;
     font = new Font("../Images/Monospace.ttf", 12);
     nObstacles_ = obstacles;
-    goal_ = new Meta(this); goal_->setDimension(50, height); goal_->setPosition(roadLength, height / 2);
     record_ = 0;
 }
 
 void Game::startGame() {
+    if (container != nullptr)delete container;
+    container = new GameObjectContainer();
     time_ = 0;
-    if (car != nullptr)delete car;
-    car = new Car(this);
-    car->setDimension(CAR_WIDTH, CAR_HEIGHT);
-    car->setPosition(car->getWidth(), height/ 2.0);
-    clearObstacles();
+    goal_ = new Meta(this); goal_->setDimension(50, height); goal_->setPosition(roadLength, height / 2);
+    container->add(goal_);
+    car = new Car(this); car->setDimension(CAR_WIDTH, CAR_HEIGHT); car->setPosition(car->getWidth(), height/ 2.0);
+    container->add(car);
     createObstacles();
 }
 
-void Game::createObstacles() { //no se me ocurre como hacer esto mejor la verdad (sin dos vectores quiero decir)
-    vector<Wall*> auxObstacles_;
-
+void Game::createObstacles() {
     for (int j = 0; j < nObstacles_; j++) {
-        auxObstacles_.push_back(new Wall(this));
-        auxObstacles_[j]->setPosition(rand() % (roadLength - (car->getWidth() * 2)) + (car->getWidth() * 2), rand() % height);
-        auxObstacles_[j]->setDimension(WALL_WIDTH, WALL_HEIGHT);
+        Wall* w = new Wall(this);
+        w->setPosition(rand() % (roadLength - (car->getWidth() * 2)) + (car->getWidth() * 2), rand() % height);
+        w->setDimension(WALL_WIDTH, WALL_HEIGHT);
+        container->add(w);
     }
 
-    for (int i = 0; i < auxObstacles_.size(); i++) {
-        if (obstacles_.size() == 0)obstacles_.push_back(auxObstacles_[i]);
-        else {
-            int k = 0;
-            while (k < obstacles_.size() && !SDL_HasIntersection(&auxObstacles_[i]->getCollider(), &obstacles_[k]->getCollider())) {
-                k++;
-            }
-            if (k == obstacles_.size())obstacles_.push_back(auxObstacles_[i]); 
-            else {
-                delete auxObstacles_[i];
-                auxObstacles_[i] = nullptr;
-            }
-        }
-    }
-    auxObstacles_.clear();
+    container->removeDead();
 }
 
 string Game::getGameName() {
@@ -60,32 +45,9 @@ Game::~Game() {
     cout << "[DEBUG] deleting game" << endl;
 
     // puesto para que no deje basura
-    delete car;
     delete font;
     delete textureContainer;
-    delete goal_;
-
-    clearObstacles();
-}
-
-void Game::clearObstacles() {
-    while (obstacles_.size() > 0) {
-        delete obstacles_[0];
-        obstacles_[0] = nullptr;
-        obstacles_.erase(obstacles_.begin());
-    }
-}
-
-void Game::freeWall(Wall* w){
-    int i = 0;
-    while(i<obstacles_.size() && w!=obstacles_[i]){
-        i++;
-    }
-    if(i!=obstacles_.size()){
-        delete obstacles_[i];
-        obstacles_[i]=nullptr;
-        obstacles_.erase(obstacles_.begin()+i);
-    }
+    delete container;
 }
 
 void Game::update(){
@@ -96,15 +58,12 @@ void Game::update(){
     case RUNNING:
         time_ += SDL_GetTicks() / 1000; //funciona raro y sinceramente no se por que
         distance_ = roadLength - car->getX();
-        car->update();
-        for (Wall* w : obstacles_)w->update();
-        goal_->update();
+        container->update();
         break;
     case GAMEOVER:
         break;
     }
 }
-
 
 void Game::draw(){
     switch (currentState_)
@@ -113,14 +72,8 @@ void Game::draw(){
         drawMenu();
         break;
     case RUNNING:
-        car->draw();
-        goal_->draw();
-        for (Wall* w : obstacles_)w->draw();
-        if (debug_) {
-            car->drawDebug();
-            for (Wall* w : obstacles_)w->drawDebug();
-            goal_->drawDebug();
-        }
+        container->draw();
+        if (debug_) container->drawDebug();
         drawInfo();
         break;
     case GAMEOVER:
@@ -145,7 +98,7 @@ void Game::drawInfo() {
         "Speed: " + to_string((int) car->getVel()) + "  " + 
         "Power: " + to_string(car->getPower()) + "  " + 
         "Time: " + to_string((int)time_) + "  " + 
-        "Obstacles: " + to_string(obstacles_.size());
+        "Obstacles: " + to_string(nObstacles_);
     string s2 = "State: Playing"; // esto deberia pillar el nombre de la variable directamente?
 
     renderText(s1, x, y);
@@ -303,7 +256,7 @@ Point2D<int> Game::getOrigin() {
 
 void Game::gotHit(Wall *w) {
     car->gotHit();
-    freeWall(w);
+    container->removeDead();
 }
 
 void Game::carUpNdown(int i) {

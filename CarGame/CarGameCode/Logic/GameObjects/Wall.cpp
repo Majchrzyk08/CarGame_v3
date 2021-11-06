@@ -13,10 +13,7 @@ void Wall::draw() {
 }
 
 void Wall::update() {
-	if(getX()+getWidth()< -game->getOrigin().getX())game->freeWall(this);	
-	else {
-		if (SDL_HasIntersection(&getCollider(), &game->getCarColl())) {
-			game->gotHit(this);
-		}
+	if (SDL_HasIntersection(&getCollider(), &game->getCarColl())) {
+		game->gotHit(this);
 	}
 }
