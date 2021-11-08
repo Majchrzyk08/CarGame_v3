@@ -28,6 +28,12 @@ void GameObjectContainer::add(GameObject* g) {
 void GameObjectContainer::removeDead() {
 	int i = 0;
 	while (i < gameObjects.size()) {
+		/*
+		if (!gameObjects[i]->getAlive()) {
+			delete gameObjects[i];
+			gameObjects[i] = nullptr;
+			gameObjects.erase(gameObjects.begin() + i);
+		}*/
 		if (hasCollision(gameObjects[i]) && gameObjects[i]->toDelete()) {
 			delete gameObjects[i];
 			gameObjects[i] = nullptr;
@@ -43,14 +49,6 @@ bool GameObjectContainer::hasCollision(GameObject* g) {
 
 vector<Collider*> GameObjectContainer::getCollisions(GameObject* g) {
 	vector<Collider*>aux;
-	int i = 0, j = 0;
-
-	while (j < gameObjects.size() && g != gameObjects[j]) j++;
-
-	for (GameObject* go : gameObjects) {
-		if (i != j && SDL_HasIntersection(&gameObjects[j]->getCollider(), &go->getCollider())) aux.push_back(go);
-		i++;
-	}
-
+	for (GameObject* go : gameObjects) if (go!=g && SDL_HasIntersection(&g->getCollider(), &go->getCollider())) aux.push_back(go);
 	return aux;
 }

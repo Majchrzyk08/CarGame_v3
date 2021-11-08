@@ -23,18 +23,7 @@ void Game::startGame() {
     container->add(goal_);
     car = new Car(this); car->setDimension(CAR_WIDTH, CAR_HEIGHT); car->setPosition(car->getWidth(), height/ 2.0);
     container->add(car);
-    createObstacles();
-}
-
-void Game::createObstacles() {
-    for (int j = 0; j < nObstacles_; j++) {
-        Wall* w = new Wall(this);
-        w->setPosition(rand() % (roadLength - (car->getWidth() * 2)) + (car->getWidth() * 2), rand() % height);
-        w->setDimension(WALL_WIDTH, WALL_HEIGHT);
-        container->add(w);
-    }
-
-    container->removeDead();
+    GameObjectGenerator::generate(this, nObstacles_);
 }
 
 string Game::getGameName() {
@@ -59,6 +48,7 @@ void Game::update(){
         time_ += SDL_GetTicks() / 1000; //funciona raro y sinceramente no se por que
         distance_ = roadLength - car->getX();
         container->update();
+        container->removeDead();
         break;
     case GAMEOVER:
         break;
@@ -256,7 +246,6 @@ Point2D<int> Game::getOrigin() {
 
 void Game::gotHit(Wall *w) {
     car->gotHit();
-    container->removeDead();
 }
 
 void Game::carUpNdown(int i) {
@@ -265,4 +254,12 @@ void Game::carUpNdown(int i) {
 
 void Game::carAccNdec(int i) {
     car->accelerateNdecelerate(i);
+}
+
+void Game::addObject(GameObject* go) {
+    container->add(go);
+}
+
+bool Game::objectHasCollision(GameObject* go) {
+    return container->getCollisions(go).size() > 0;
 }

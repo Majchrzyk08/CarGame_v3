@@ -19,6 +19,7 @@
 #include "GameObjects/Meta.h"
 
 #include "GameObjectContainer.h"
+#include "GameObjectGenerator.h"
 
 enum state_ {MENU, RUNNING, GAMEOVER};
 
@@ -52,8 +53,6 @@ private:
     state_ currentState_ = MENU;
 
     int level_ = 0;
-
-    void createObstacles();
 
     void drawInfo();
     void drawMenu();
@@ -93,8 +92,6 @@ public:
     void switchHelp() { help_ = !help_; }
     void vic(bool i) { victory_ = i; }
 
-    void freeWall(Wall* w);
-
     SDL_Rect getCarColl() { return car->getCollider(); }
     void gotHit(Wall *w);
 
@@ -102,6 +99,11 @@ public:
     void carAccNdec(int i);
 
     void switchDebug() { debug_ = !debug_; }
+    int getRoadlength() { return roadLength; }
+    int getHeight() { return height; }
+
+    void addObject(GameObject* go);
+    bool objectHasCollision(GameObject* go);
 };
 
 

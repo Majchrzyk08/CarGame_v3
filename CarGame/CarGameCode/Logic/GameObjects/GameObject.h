@@ -15,6 +15,7 @@ class GameObject : public Collider{
 protected:
     Game *game;
     Texture *texture;
+    bool alive = true;
 
     void drawTexture(Texture* texture);
 public:
@@ -42,5 +43,7 @@ public:
     virtual SDL_Rect getCenter();
 
     bool collide(SDL_Rect other);
+
+    bool getAlive() { return alive; }
 };
 #endif //CARGAME_GAMEOBJECT_H

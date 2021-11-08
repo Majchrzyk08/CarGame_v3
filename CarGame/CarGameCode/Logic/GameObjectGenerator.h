@@ -10,7 +10,7 @@ class GameObjectGenerator {
 public:
     static void generate(Game *game, int N_ROCKS = 0){
         for(int i = 0; i < N_ROCKS; i++)
-            addInRandomPosition(game, new Rock(game));
+            addInRandomPosition(game, new Wall(game));
     }   
 };
 
