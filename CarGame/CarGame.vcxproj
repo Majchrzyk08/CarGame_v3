@@ -29,6 +29,7 @@
     <ClCompile Include="CarGameCode\Logic\GameObjects\PowerUp.cpp" />
     <ClCompile Include="CarGameCode\Logic\GameObjects\Wall.cpp" />
     <ClCompile Include="CarGameCode\Main.cpp" />
+    <ClCompile Include="CarGameCode\View\Infobar.cpp" />
     <ClCompile Include="CarGameCode\View\Texture.cpp" />
   </ItemGroup>
   <ItemGroup>

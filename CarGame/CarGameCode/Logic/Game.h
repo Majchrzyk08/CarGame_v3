@@ -9,6 +9,7 @@
 #include <string>
 #include <vector>
 
+#include "../View/Infobar.h"
 #include "../View/TextureContainer.h"
 #include "../View/Texture.h"
 #include "../View/Box.h"
@@ -27,7 +28,7 @@ enum state_ {MENU, RUNNING, GAMEOVER};
 using namespace std;
 
 class Game{
-
+    friend class Infobar;
 
 private:
     string name;
@@ -58,9 +59,6 @@ private:
 
     int level_ = 0;
 
-    void drawInfo();
-    void drawMenu();
-    void drawGameOver();
 public:
     const unsigned int CAR_WIDTH = 100;
     const unsigned  int CAR_HEIGHT = 50;

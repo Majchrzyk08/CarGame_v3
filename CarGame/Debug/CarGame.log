@@ -1,4 +1,4 @@
-﻿  Game.cpp
+﻿  Infobar.cpp
 D:\UniversidadPDFs\TPV1\Esta vez de verdad\P2\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(39,32): warning C4244: 'return': conversión de 'T' a 'int'; posible pérdida de datos
           with
           [
@@ -9,5 +9,4 @@ D:\UniversidadPDFs\TPV1\Esta vez de verdad\P2\CarGame\CarGameCode\Logic\GameObje
           [
               T=double
           ]
-D:\UniversidadPDFs\TPV1\Esta vez de verdad\P2\CarGame\CarGameCode\Logic\Game.cpp(22,31): warning C4244: '=': conversión de 'Uint32' a 'float'; posible pérdida de datos
   CarGame.vcxproj -> D:\UniversidadPDFs\TPV1\Esta vez de verdad\P2\bin\CarGamePr1Debug.exe
