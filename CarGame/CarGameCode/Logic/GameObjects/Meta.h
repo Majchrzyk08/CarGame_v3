@@ -12,5 +12,7 @@ public:
     ~Meta();
 
     void draw();
-    void update();
+    void update(){}
+
+    bool receiveCarCollision(Car* c);
 };

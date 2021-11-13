@@ -13,9 +13,8 @@ void PowerUp::draw() {
 	}
 }
 
-void PowerUp::update() {
-	if (SDL_HasIntersection(&getCollider(), &game->getCarColl())) {
-		game->gotPower();
-		alive = false;
-	}
+bool PowerUp::receiveCarCollision(Car* c) {
+	c->gotPower();
+	alive = false;
+	return true;
 }

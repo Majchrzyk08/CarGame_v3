@@ -94,9 +94,6 @@ public:
     void vic(bool i) { victory_ = i; }
 
     bool isRebased(GameObject* go);
-    SDL_Rect getCarColl() { return car->getCollider(); }
-    void gotHit();
-    void gotPower();
 
     void carUpNdown(int i);
     void carAccNdec(int i);
@@ -107,6 +104,7 @@ public:
 
     void addObject(GameObject* go);
     bool objectHasCollision(GameObject* go);
+    vector<Collider*> getCollisions(GameObject* go) { return container->getCollisions(go); }
 };
 
 

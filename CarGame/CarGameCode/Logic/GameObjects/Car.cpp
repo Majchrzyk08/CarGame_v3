@@ -56,6 +56,9 @@ void Car::update() {
     }
 
     setPosition(getX() + vel_, getY() + vspeedaux);
+
+    vector<Collider*> collisions = game->getCollisions(this);
+    for (Collider* c : collisions)c->receiveCarCollision(this);
 }
 
 Car::~Car(){};

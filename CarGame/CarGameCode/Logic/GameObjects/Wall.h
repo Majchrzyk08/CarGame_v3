@@ -7,5 +7,6 @@ public:
     ~Wall();
 
     void draw();
-    void update();
+
+    bool receiveCarCollision(Car* c);
 };

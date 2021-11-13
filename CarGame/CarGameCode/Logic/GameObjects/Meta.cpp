@@ -12,9 +12,8 @@ void Meta::draw() {
 	}	
 }
 
-void Meta::update() {
-	if (SDL_HasIntersection(&getCollider(), &game->getCarColl())) {
-		game->vic(true);
-		game->changeState(GAMEOVER);
-	}
+bool Meta::receiveCarCollision(Car* c) {
+	game->vic(true);
+	game->changeState(GAMEOVER);
+	return true;
 }

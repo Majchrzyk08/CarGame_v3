@@ -13,9 +13,8 @@ void Wall::draw() {
 	}
 }
 
-void Wall::update() {
-	if (SDL_HasIntersection(&getCollider(), &game->getCarColl())) {
-		game->gotHit();
-		alive = false;
-	}
+bool Wall::receiveCarCollision(Car* c) {
+	c->gotHit();
+	alive = false;
+	return true;
 }

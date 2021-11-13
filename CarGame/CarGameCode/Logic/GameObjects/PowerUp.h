@@ -7,5 +7,6 @@ public:
 	~PowerUp();
 
 	void draw();
-	void update();
+
+	bool receiveCarCollision(Car* c);
 };

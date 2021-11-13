@@ -248,13 +248,6 @@ bool Game::isRebased(GameObject* go) {
     return go->getX() < -getOrigin().getX();
 }
 
-void Game::gotHit() {
-    car->gotHit();
-}
-void Game::gotPower() {
-    car->gotPower();
-}
-
 void Game::carUpNdown(int i) {
     car->upNdown(i);
 }
