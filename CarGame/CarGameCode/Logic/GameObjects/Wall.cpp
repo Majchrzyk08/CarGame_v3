@@ -17,4 +17,5 @@ void Wall::update() {
 		game->gotHit(this);
 		alive = false;
 	}
+	if (getX() < -game->getOrigin().getX() - getWidth())alive = false;
 }

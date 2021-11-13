@@ -6,6 +6,7 @@
 class Game;
 
 class Wall : public GameObject{
+    bool alive = true;
 public:
     Wall(Game* g);
     ~Wall();
@@ -13,5 +14,5 @@ public:
     void draw();
     void update();
 
-    bool toDelete() { return true; }
+    bool toDelete() { return !alive; }
 };
