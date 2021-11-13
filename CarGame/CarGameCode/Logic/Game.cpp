@@ -19,6 +19,7 @@ void Game::startGame() {
     if (container != nullptr)delete container;
     container = new GameObjectContainer();
     time_ = 0;
+    timeOfStart = SDL_GetTicks();
     goal_ = new Meta(this); goal_->setDimension(50, height); goal_->setPosition(roadLength, height / 2);
     container->add(goal_);
     car = new Car(this); car->setDimension(CAR_WIDTH, CAR_HEIGHT); car->setPosition(car->getWidth(), height/ 2.0);
@@ -45,7 +46,7 @@ void Game::update(){
     case MENU:
         break;
     case RUNNING:
-        time_ += SDL_GetTicks() / 1000; //funciona raro y sinceramente no se por que
+        time_ = (SDL_GetTicks()-timeOfStart) / 1000; //funciona raro y sinceramente no se por que
         distance_ = roadLength - car->getX();
         container->update();
         container->removeDead();
@@ -70,6 +71,10 @@ void Game::draw(){
         drawGameOver();
         break;
     }
+}
+
+void Game::appendHelpInfo(string s) {
+    help.push_back(s);
 }
 
 // no se muy bien si estos metodos tienen que ser a la fuerza tan "en la cara" pero no se me ocurre una forma distinta de escribir la info en pantalla
@@ -102,24 +107,11 @@ void Game::drawInfo() {
     }
     if (help_) {
         int yh = font->getSize()*2;
-
-        string h1 = "[UP/DOWN] to move";
-        string h2 = "[RIGHT/LEFT] to speed up";
-        string h3 = "[s] to shoot (Not Implemented)";
-        string h4 = "[d] toggle debug";
-        string h5 = "[h] toggle help";
-        string h6 = "[p] to pause/unpause (Not Implemented)";
-        string h7 = "[ ] space to skip";
-        string h8 = "[ESC] to quit";
-
-        renderText(h1, x, yh);
-        renderText(h2, x, yh + font->getSize());
-        renderText(h3, x, yh + font->getSize()*2);
-        renderText(h4, x, yh + font->getSize()*3);
-        renderText(h5, x, yh + font->getSize()*4);
-        renderText(h6, x, yh + font->getSize()*5);
-        renderText(h7, x, yh + font->getSize()*6);
-        renderText(h8, x, yh + font->getSize()*7);
+        int i = 0;
+        for (auto s : help) {
+            renderText(s, x, yh+font->getSize()*i);
+            i++;
+        }        
     }
 }
 void Game::drawMenu() {
@@ -142,14 +134,11 @@ void Game::drawMenu() {
 
     if (help_) {
         int xh = font->getSize() / 2;
-
-        string h1 = "[h] toggle help";
-        string h2 = "[ ] space to skip";
-        string h3 = "[ESC] to quit";
-
-        renderText(h1, xh, xh);
-        renderText(h2, xh, xh + font->getSize());
-        renderText(h3, xh, xh + font->getSize() * 2);
+        int i = 0;
+        for (auto s : help) {
+            renderText(s, font->getSize() / 2, xh + font->getSize() * i);
+            i++;
+        }
     }
 }
 void Game::drawGameOver() {
@@ -182,14 +171,11 @@ void Game::drawGameOver() {
 
     if (help_) {
         int xh = font->getSize() / 2;
-
-        string h1 = "[h] toggle help";
-        string h2 = "[ ] space to skip";
-        string h3 = "[ESC] to quit";
-
-        renderText(h1, xh, xh);
-        renderText(h2, xh, xh + font->getSize());
-        renderText(h3, xh, xh + font->getSize() * 2);
+        int i = 0;
+        for (auto s : help) {
+            renderText(s, font->getSize() / 2, xh + font->getSize() * i);
+            i++;
+        }
     }
 }
 
@@ -249,11 +235,11 @@ bool Game::isRebased(GameObject* go) {
 }
 
 void Game::carUpNdown(int i) {
-    car->upNdown(i);
+    if(car!=nullptr) car->upNdown(i);
 }
 
 void Game::carAccNdec(int i) {
-    car->accelerateNdecelerate(i);
+    if(car!=nullptr) car->accelerateNdecelerate(i);
 }
 
 void Game::addObject(GameObject* go) {

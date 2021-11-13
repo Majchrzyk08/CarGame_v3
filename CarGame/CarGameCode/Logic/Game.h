@@ -40,8 +40,11 @@ private:
     Car *car = nullptr;
     int distance_;
     float time_;
+    float timeOfStart;
     float record_;
     Meta* goal_ = nullptr;
+
+    vector<string> help;
 
     GameObjectContainer* container = nullptr;
 
@@ -89,8 +92,11 @@ public:
     SDL_Renderer *getRenderer();
     void renderText(string text, int x, int y, SDL_Color color={0,0,0}); //no estoy seguro de si esto deberia ser privado o no, creo que si tho
 
+    void appendHelpInfo(string s);
+    void clearHelp() { help.clear(); }
     void changeState(state_ s);
     void switchHelp() { help_ = !help_; }
+    void switchDebug() { debug_ = !debug_; }
     void vic(bool i) { victory_ = i; }
 
     bool isRebased(GameObject* go);
@@ -98,7 +104,6 @@ public:
     void carUpNdown(int i);
     void carAccNdec(int i);
 
-    void switchDebug() { debug_ = !debug_; }
     int getRoadlength() { return roadLength; }
     int getHeight() { return height; }
 

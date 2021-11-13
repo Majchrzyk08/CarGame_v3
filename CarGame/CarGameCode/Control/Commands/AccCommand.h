@@ -4,7 +4,7 @@
 class AccCommand :public Command {
     int vel;
 public:
-    const string INFO_STRING = "";
+    const string INFO_STRING = "[RIGHT/LEFT] to speed up";
 
     AccCommand() {
         info_string = INFO_STRING;

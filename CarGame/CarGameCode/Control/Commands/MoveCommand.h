@@ -4,7 +4,7 @@
 class MoveCommand :public Command {
     int vel;
 public:
-    const string INFO_STRING = "";
+    const string INFO_STRING = "[UP/DOWN] to move";
 
     MoveCommand() {
         info_string = INFO_STRING;

@@ -16,7 +16,7 @@ class CommandFactory {
 public:
     CommandFactory(Game *g){
         game = g;
-        //game->clearHelp();
+        game->clearHelp();
     }
 
     ~CommandFactory(){

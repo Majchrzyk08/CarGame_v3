@@ -4,7 +4,7 @@
 class HelpCommand :public Command {
 
 public:
-    const string INFO_STRING = "";
+    const string INFO_STRING = "[h] toggle help";
 
     HelpCommand() {
         info_string = INFO_STRING;

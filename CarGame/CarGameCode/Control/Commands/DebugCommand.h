@@ -4,7 +4,7 @@
 class DebugCommand :public Command {
     
 public:
-    const string INFO_STRING = "";
+    const string INFO_STRING = "[d] toggle debug";
 
     DebugCommand() {
         info_string = INFO_STRING;

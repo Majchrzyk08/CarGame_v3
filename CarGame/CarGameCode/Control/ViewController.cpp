@@ -10,12 +10,12 @@ ViewController::ViewController(Game *_game) {
     initSDL();
 
     commandFactory = new CommandFactory(game);
-    commandFactory->add(new QuitCommand());
     commandFactory->add(new MoveCommand());
     commandFactory->add(new AccCommand());
-    commandFactory->add(new HelpCommand());
     commandFactory->add(new DebugCommand());
+    commandFactory->add(new HelpCommand());
     commandFactory->add(new StartCommand());
+    commandFactory->add(new QuitCommand());
 
     game->setRenderer(renderer);
     game->loadTextures();
