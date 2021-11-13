@@ -4,7 +4,7 @@
 
 #include "Game.h"
 
-Game::Game(string name, int width, int height, int roadLength, int obstacles) {
+Game::Game(string name, int width, int height, int roadLength, int obstacles, int powerups) {
     this->name = name;
     this->roadLength = roadLength;
     this->width = width;
@@ -12,6 +12,7 @@ Game::Game(string name, int width, int height, int roadLength, int obstacles) {
     doExit = false;
     font = new Font("../Images/Monospace.ttf", 12);
     nObstacles_ = obstacles;
+    nPowerups = powerups;
     record_ = 0;
 }
 
@@ -24,7 +25,7 @@ void Game::startGame() {
     container->add(goal_);
     car = new Car(this); car->setDimension(CAR_WIDTH, CAR_HEIGHT); car->setPosition(car->getWidth(), height/ 2.0);
     container->add(car);
-    GameObjectGenerator::generate(this, nObstacles_, 5);
+    GameObjectGenerator::generate(this, nObstacles_, nPowerups);
 }
 
 string Game::getGameName() {

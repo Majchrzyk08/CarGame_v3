@@ -50,6 +50,7 @@ private:
     GameObjectContainer* container = nullptr;
 
     int nObstacles_;
+    int nPowerups;
     
     TextureContainer *textureContainer;
     SDL_Renderer* renderer = nullptr;
@@ -66,7 +67,7 @@ public:
     const unsigned int WALL_WIDTH = 50;
     const unsigned int WALL_HEIGHT = 50;
 
-    Game(string name, int width, int height, int roadLength, int obstacles);
+    Game(string name, int width, int height, int roadLength, int obstacles, int powerups = 0);
     ~Game();
 
     void startGame();
@@ -88,7 +89,7 @@ public:
     void loadTextures();
     Texture *getTexture(TextureName name);
     SDL_Renderer *getRenderer();
-    void renderText(string text, int x, int y, SDL_Color color={0,0,0}); //no estoy seguro de si esto deberia ser privado o no, creo que si tho
+    void renderText(string text, int x, int y, SDL_Color color={0,0,0});
 
     void appendHelpInfo(string s);
     void clearHelp() { help.clear(); }
