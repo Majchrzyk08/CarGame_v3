@@ -50,6 +50,24 @@
     <ClCompile Include="CarGameCode\Logic\GameObjects\GoodObject.cpp">
       <Filter>Archivos de código fuente</Filter>
     </ClCompile>
+    <ClCompile Include="CarGameCode\Control\Commands\QuitCommand.cpp">
+      <Filter>Archivos de código fuente</Filter>
+    </ClCompile>
+    <ClCompile Include="CarGameCode\Control\Commands\MoveCommand.cpp">
+      <Filter>Archivos de código fuente</Filter>
+    </ClCompile>
+    <ClCompile Include="CarGameCode\Control\Commands\AccCommand.cpp">
+      <Filter>Archivos de código fuente</Filter>
+    </ClCompile>
+    <ClCompile Include="CarGameCode\Control\Commands\DebugCommand.cpp">
+      <Filter>Archivos de código fuente</Filter>
+    </ClCompile>
+    <ClCompile Include="CarGameCode\Control\Commands\HelpCommand.cpp">
+      <Filter>Archivos de código fuente</Filter>
+    </ClCompile>
+    <ClCompile Include="CarGameCode\Control\Commands\StartCommand.cpp">
+      <Filter>Archivos de código fuente</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CarGameCode\Logic\Game.h" />
@@ -72,6 +90,13 @@
     <ClInclude Include="CarGameCode\Logic\GameObjects\GameObject.h" />
     <ClInclude Include="CarGameCode\Logic\GameObjects\PowerUp.h" />
     <ClInclude Include="CarGameCode\Logic\GameObjects\GoodObject.h" />
+    <ClInclude Include="CarGameCode\Control\Commands\Command.h" />
+    <ClInclude Include="CarGameCode\Control\Commands\QuitCommand.h" />
+    <ClInclude Include="CarGameCode\Control\Commands\MoveCommand.h" />
+    <ClInclude Include="CarGameCode\Control\Commands\AccCommand.h" />
+    <ClInclude Include="CarGameCode\Control\Commands\DebugCommand.h" />
+    <ClInclude Include="CarGameCode\Control\Commands\HelpCommand.h" />
+    <ClInclude Include="CarGameCode\Control\Commands\StartCommand.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="CarGameCode\Images\oil.png">

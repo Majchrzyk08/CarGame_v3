@@ -11,6 +11,12 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="CarGameCode\Control\Commands\AccCommand.cpp" />
+    <ClCompile Include="CarGameCode\Control\Commands\DebugCommand.cpp" />
+    <ClCompile Include="CarGameCode\Control\Commands\HelpCommand.cpp" />
+    <ClCompile Include="CarGameCode\Control\Commands\MoveCommand.cpp" />
+    <ClCompile Include="CarGameCode\Control\Commands\QuitCommand.cpp" />
+    <ClCompile Include="CarGameCode\Control\Commands\StartCommand.cpp" />
     <ClCompile Include="CarGameCode\Control\ViewController.cpp" />
     <ClCompile Include="CarGameCode\Logic\Game.cpp" />
     <ClCompile Include="CarGameCode\Logic\GameObjectContainer.cpp" />
@@ -27,6 +33,13 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CarGameCode\Control\CommandFactory.h" />
+    <ClInclude Include="CarGameCode\Control\Commands\AccCommand.h" />
+    <ClInclude Include="CarGameCode\Control\Commands\Command.h" />
+    <ClInclude Include="CarGameCode\Control\Commands\DebugCommand.h" />
+    <ClInclude Include="CarGameCode\Control\Commands\HelpCommand.h" />
+    <ClInclude Include="CarGameCode\Control\Commands\MoveCommand.h" />
+    <ClInclude Include="CarGameCode\Control\Commands\QuitCommand.h" />
+    <ClInclude Include="CarGameCode\Control\Commands\StartCommand.h" />
     <ClInclude Include="CarGameCode\Control\ViewController.h" />
     <ClInclude Include="CarGameCode\Logic\Game.h" />
     <ClInclude Include="CarGameCode\Logic\GameObjectContainer.h" />

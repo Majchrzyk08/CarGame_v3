@@ -9,6 +9,8 @@
 #include "SDL_image.h"
 #include "SDL_ttf.h"
 
+#include "CommandFactory.h"
+
 #include "../Logic/Game.h"
 
 const int FRAME_RATE = 30;
@@ -18,6 +20,8 @@ private:
     Game *game;
     SDL_Window* window = nullptr;
     SDL_Renderer* renderer = nullptr;
+
+    CommandFactory* commandFactory = nullptr;
 
     void initSDL();
 public:

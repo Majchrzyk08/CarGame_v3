@@ -1,11 +1,12 @@
 #ifndef CARGAME_COMMANDFACTORY_H
 #define CARGAME_COMMANDFACTORY_H
 
-#include "CarGameCode/Control/Commands/QuitCommand.h"
-#include "CarGameCode/Control/Commands/MoveCommand.h"
-#include "CarGameCode/Control/Commands/DebugCommand.h"
-#include "CarGameCode/Control/Commands/HelpCommand.h"
-#include "CarGameCode/Control/Commands/AccCommand.h"
+#include "Commands/QuitCommand.h"
+#include "Commands/MoveCommand.h"
+#include "Commands/DebugCommand.h"
+#include "Commands/HelpCommand.h"
+#include "Commands/AccCommand.h"
+#include "Commands/StartCommand.h"
 #include <vector>
 
 class CommandFactory {
@@ -15,7 +16,7 @@ class CommandFactory {
 public:
     CommandFactory(Game *g){
         game = g;
-        game->clearHelp();
+        //game->clearHelp();
     }
 
     ~CommandFactory(){

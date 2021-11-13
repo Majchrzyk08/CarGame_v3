@@ -1,4 +1,4 @@
-﻿  PowerUp.cpp
+﻿  ViewController.cpp
 D:\UniversidadPDFs\TPV1\Esta vez de verdad\P2\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(39,32): warning C4244: 'return': conversión de 'T' a 'int'; posible pérdida de datos
           with
           [
@@ -9,7 +9,7 @@ D:\UniversidadPDFs\TPV1\Esta vez de verdad\P2\CarGame\CarGameCode\Logic\GameObje
           [
               T=double
           ]
-  Wall.cpp
+  Car.cpp
 D:\UniversidadPDFs\TPV1\Esta vez de verdad\P2\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(39,32): warning C4244: 'return': conversión de 'T' a 'int'; posible pérdida de datos
           with
           [

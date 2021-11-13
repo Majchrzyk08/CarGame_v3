@@ -9,6 +9,14 @@ ViewController::ViewController(Game *_game) {
     cout << "[DEBUG] frame duration: " << frameDuration() << " ms" << endl;
     initSDL();
 
+    commandFactory = new CommandFactory(game);
+    commandFactory->add(new QuitCommand());
+    commandFactory->add(new MoveCommand());
+    commandFactory->add(new AccCommand());
+    commandFactory->add(new HelpCommand());
+    commandFactory->add(new DebugCommand());
+    commandFactory->add(new StartCommand());
+
     game->setRenderer(renderer);
     game->loadTextures();
 
@@ -42,51 +50,8 @@ void ViewController::clearBackground() {
 void ViewController::handleEvents() {
     SDL_Event event;
     while (SDL_PollEvent(&event) ){
-        if( event.type == SDL_QUIT)
-            game->setUserExit();
-        else if (event.type==SDL_KEYDOWN) {
-            switch (event.key.keysym.sym)
-            {
-            case SDLK_UP:
-                game->carUpNdown(-1);
-                break;
-            case SDLK_DOWN:
-                game->carUpNdown(1);
-                break;
-            case SDLK_RIGHT:
-                game->carAccNdec(1);
-                break;
-            case SDLK_LEFT:
-                game->carAccNdec(-1);
-                break;
-            case SDLK_SPACE:
-                game->startGame();
-                game->changeState(RUNNING);
-                break;
-            case SDLK_ESCAPE:
-                game->setUserExit();
-                break;
-            case SDLK_h:
-                game->switchHelp();
-                break;
-            case SDLK_d:
-                game->switchDebug();
-                break;
-            }
-        }
-        else if (event.type == SDL_KEYUP) {
-            switch (event.key.keysym.sym)
-            {
-            case SDLK_UP:
-            case SDLK_DOWN:
-                game->carUpNdown(0);
-                break;
-            case SDLK_RIGHT:
-            case SDLK_LEFT:
-                game->carAccNdec(0);
-                break;
-            }
-        }
+        Command* command = commandFactory->getCommand(event);
+        if (command != nullptr)command->execute();
     }
 }
 
@@ -114,6 +79,8 @@ void ViewController::initSDL() {
 }
 
 ViewController::~ViewController() {
+    delete commandFactory;
+
     SDL_DestroyRenderer(renderer);
     SDL_DestroyWindow(window);
     SDL_Quit();

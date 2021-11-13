@@ -48,7 +48,7 @@ void Car::update() {
         break;
     case -1:
         vel_ *= DECELERATION;
-        if (vel_ < 1) {
+        if (vel_ < 1 && vel_!=0) {
             vel_ = 1;
             hmove = 0;
         }
