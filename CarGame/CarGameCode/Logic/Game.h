@@ -16,6 +16,7 @@
 
 #include "GameObjects/Car.h"
 #include "GameObjects/Wall.h"
+#include "GameObjects/PowerUp.h"
 #include "GameObjects/Meta.h"
 
 #include "GameObjectContainer.h"
@@ -93,7 +94,8 @@ public:
     void vic(bool i) { victory_ = i; }
 
     SDL_Rect getCarColl() { return car->getCollider(); }
-    void gotHit(Wall *w);
+    void gotHit();
+    void gotPower();
 
     void carUpNdown(int i);
     void carAccNdec(int i);

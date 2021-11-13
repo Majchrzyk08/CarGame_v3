@@ -23,7 +23,7 @@ void Game::startGame() {
     container->add(goal_);
     car = new Car(this); car->setDimension(CAR_WIDTH, CAR_HEIGHT); car->setPosition(car->getWidth(), height/ 2.0);
     container->add(car);
-    GameObjectGenerator::generate(this, nObstacles_);
+    GameObjectGenerator::generate(this, nObstacles_, 5);
 }
 
 string Game::getGameName() {
@@ -244,8 +244,11 @@ Point2D<int> Game::getOrigin() {
     return {int(-(car->getX() - car->getWidth())), 0};
 }
 
-void Game::gotHit(Wall *w) {
+void Game::gotHit() {
     car->gotHit();
+}
+void Game::gotPower() {
+    car->gotPower();
 }
 
 void Game::carUpNdown(int i) {

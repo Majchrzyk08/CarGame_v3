@@ -41,6 +41,7 @@ public:
     int getPower() { return power_; }
 
     void gotHit();
+    void gotPower();
 
     virtual SDL_Rect getCenter();
 

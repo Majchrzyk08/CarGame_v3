@@ -14,7 +14,7 @@ void Wall::draw() {
 
 void Wall::update() {
 	if (SDL_HasIntersection(&getCollider(), &game->getCarColl())) {
-		game->gotHit(this);
+		game->gotHit();
 		alive = false;
 	}
 	if (getX() < -game->getOrigin().getX() - getWidth())alive = false;

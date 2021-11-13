@@ -72,6 +72,9 @@ void Car::gotHit() {
     else power_--;
     vel_=0;
 }
+void Car::gotPower() {
+    if (power_ + 1 <= INITIAL_POWER)power_ += 1;
+}
 
 void Car::upNdown(int i) {
     vmove = i;
