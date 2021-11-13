@@ -1,10 +1,11 @@
 #include "../Game.h"
 
-PowerUp::PowerUp(Game* g) :GameObject(g) {
+PowerUp::PowerUp(Game* g) : GoodObject(g) {
 	texture = nullptr;
+	GoodObject::onEnter();
 }
 
-PowerUp::~PowerUp(){}
+PowerUp::~PowerUp() { GoodObject::onDelete(); }
 
 void PowerUp::draw() {
 	if ((-game->getOrigin().getX()) + game->getWindowWidth() + getWidth() > getX()) { //calculo para saber cuando se tiene que empezar a dibujar dibujar
@@ -17,5 +18,4 @@ void PowerUp::update() {
 		game->gotPower();
 		alive = false;
 	}
-	if (getX() < -game->getOrigin().getX() - getWidth())alive = false;
 }

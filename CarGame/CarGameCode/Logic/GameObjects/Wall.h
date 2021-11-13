@@ -1,18 +1,11 @@
-#include "../../Utils/Vector2D.h"
-#include "../../View/Texture.h"
-#include "../../View/Box.h"
-#include "GameObject.h"
+#pragma once
+#include "BadObject.h"
 
-class Game;
-
-class Wall : public GameObject{
-    bool alive = true;
+class Wall : public BadObject{
 public:
     Wall(Game* g);
     ~Wall();
 
     void draw();
     void update();
-
-    bool toDelete() { return !alive; }
 };

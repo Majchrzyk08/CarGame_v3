@@ -1,10 +1,11 @@
 #include "../Game.h"
 
-Wall::Wall(Game* g) : GameObject(g) {
+Wall::Wall(Game* g) : BadObject(g) {
 	texture = nullptr;
+	BadObject::onEnter();
 }
 
-Wall::~Wall() {}
+Wall::~Wall() { BadObject::onDelete(); }
 
 void Wall::draw() {
 	if ((-game->getOrigin().getX()) + game->getWindowWidth() + getWidth()> getX()) { //calculo para saber cuando se tiene que empezar a dibujar dibujar
@@ -17,5 +18,4 @@ void Wall::update() {
 		game->gotHit();
 		alive = false;
 	}
-	if (getX() < -game->getOrigin().getX() - getWidth())alive = false;
 }

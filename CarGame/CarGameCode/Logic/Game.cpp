@@ -88,7 +88,7 @@ void Game::drawInfo() {
         "Speed: " + to_string((int) car->getVel()) + "  " + 
         "Power: " + to_string(car->getPower()) + "  " + 
         "Time: " + to_string((int)time_) + "  " + 
-        "Obstacles: " + to_string(nObstacles_);
+        "Obstacles: " + to_string(BadObject::instances);
     string s2 = "State: Playing"; // esto deberia pillar el nombre de la variable directamente?
 
     renderText(s1, x, y);
@@ -242,6 +242,10 @@ Texture *Game::getTexture(TextureName name) {
 
 Point2D<int> Game::getOrigin() {
     return {int(-(car->getX() - car->getWidth())), 0};
+}
+
+bool Game::isRebased(GameObject* go) {
+    return go->getX() < -getOrigin().getX();
 }
 
 void Game::gotHit() {

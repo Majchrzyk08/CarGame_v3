@@ -18,6 +18,7 @@
     <ClCompile Include="CarGameCode\Logic\GameObjects\BadObject.cpp" />
     <ClCompile Include="CarGameCode\Logic\GameObjects\Car.cpp" />
     <ClCompile Include="CarGameCode\Logic\GameObjects\GameObject.cpp" />
+    <ClCompile Include="CarGameCode\Logic\GameObjects\GoodObject.cpp" />
     <ClCompile Include="CarGameCode\Logic\GameObjects\Meta.cpp" />
     <ClCompile Include="CarGameCode\Logic\GameObjects\PowerUp.cpp" />
     <ClCompile Include="CarGameCode\Logic\GameObjects\Wall.cpp" />
@@ -34,6 +35,7 @@
     <ClInclude Include="CarGameCode\Logic\GameObjects\Car.h" />
     <ClInclude Include="CarGameCode\Logic\GameObjects\Collider.h" />
     <ClInclude Include="CarGameCode\Logic\GameObjects\GameObject.h" />
+    <ClInclude Include="CarGameCode\Logic\GameObjects\GoodObject.h" />
     <ClInclude Include="CarGameCode\Logic\GameObjects\Meta.h" />
     <ClInclude Include="CarGameCode\Logic\GameObjects\PowerUp.h" />
     <ClInclude Include="CarGameCode\Logic\GameObjects\Wall.h" />

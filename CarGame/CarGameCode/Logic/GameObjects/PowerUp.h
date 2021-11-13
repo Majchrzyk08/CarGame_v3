@@ -1,14 +1,11 @@
 #pragma once
-#include "GameObject.h"
+#include "GoodObject.h"
 
-class PowerUp : public GameObject {
-	bool alive = true;
+class PowerUp : public GoodObject {
 public:
 	PowerUp(Game* g);
 	~PowerUp();
 
 	void draw();
 	void update();
-
-	bool toDelete() { return !alive; }
 };

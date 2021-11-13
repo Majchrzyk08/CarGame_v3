@@ -1,4 +1,4 @@
-﻿  PowerUp.cpp
+﻿  ViewController.cpp
 D:\UniversidadPDFs\TPV1\Esta vez de verdad\P2\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(39,32): warning C4244: 'return': conversión de 'T' a 'int'; posible pérdida de datos
           with
           [
@@ -9,4 +9,118 @@ D:\UniversidadPDFs\TPV1\Esta vez de verdad\P2\CarGame\CarGameCode\Logic\GameObje
           [
               T=double
           ]
+  Game.cpp
+D:\UniversidadPDFs\TPV1\Esta vez de verdad\P2\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(39,32): warning C4244: 'return': conversión de 'T' a 'int'; posible pérdida de datos
+          with
+          [
+              T=double
+          ]
+D:\UniversidadPDFs\TPV1\Esta vez de verdad\P2\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(40,32): warning C4244: 'return': conversión de 'T' a 'int'; posible pérdida de datos
+          with
+          [
+              T=double
+          ]
+  GameObjectGenerator.cpp
+D:\UniversidadPDFs\TPV1\Esta vez de verdad\P2\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(39,32): warning C4244: 'return': conversión de 'T' a 'int'; posible pérdida de datos
+          with
+          [
+              T=double
+          ]
+D:\UniversidadPDFs\TPV1\Esta vez de verdad\P2\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(40,32): warning C4244: 'return': conversión de 'T' a 'int'; posible pérdida de datos
+          with
+          [
+              T=double
+          ]
+  BadObject.cpp
+D:\UniversidadPDFs\TPV1\Esta vez de verdad\P2\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(39,32): warning C4244: 'return': conversión de 'T' a 'int'; posible pérdida de datos
+          with
+          [
+              T=double
+          ]
+D:\UniversidadPDFs\TPV1\Esta vez de verdad\P2\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(40,32): warning C4244: 'return': conversión de 'T' a 'int'; posible pérdida de datos
+          with
+          [
+              T=double
+          ]
+  Car.cpp
+D:\UniversidadPDFs\TPV1\Esta vez de verdad\P2\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(39,32): warning C4244: 'return': conversión de 'T' a 'int'; posible pérdida de datos
+          with
+          [
+              T=double
+          ]
+D:\UniversidadPDFs\TPV1\Esta vez de verdad\P2\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(40,32): warning C4244: 'return': conversión de 'T' a 'int'; posible pérdida de datos
+          with
+          [
+              T=double
+          ]
+  GameObject.cpp
+D:\UniversidadPDFs\TPV1\Esta vez de verdad\P2\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(39,32): warning C4244: 'return': conversión de 'T' a 'int'; posible pérdida de datos
+          with
+          [
+              T=double
+          ]
+D:\UniversidadPDFs\TPV1\Esta vez de verdad\P2\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(40,32): warning C4244: 'return': conversión de 'T' a 'int'; posible pérdida de datos
+          with
+          [
+              T=double
+          ]
+D:\UniversidadPDFs\TPV1\Esta vez de verdad\P2\CarGame\CarGameCode\Logic\GameObjects\GameObject.cpp(5,9): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
+D:\UniversidadPDFs\TPV1\Esta vez de verdad\P2\CarGame\CarGameCode\Logic\GameObjects\GameObject.cpp(6,9): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
+  GoodObject.cpp
+D:\UniversidadPDFs\TPV1\Esta vez de verdad\P2\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(39,32): warning C4244: 'return': conversión de 'T' a 'int'; posible pérdida de datos
+          with
+          [
+              T=double
+          ]
+D:\UniversidadPDFs\TPV1\Esta vez de verdad\P2\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(40,32): warning C4244: 'return': conversión de 'T' a 'int'; posible pérdida de datos
+          with
+          [
+              T=double
+          ]
+  Meta.cpp
+D:\UniversidadPDFs\TPV1\Esta vez de verdad\P2\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(39,32): warning C4244: 'return': conversión de 'T' a 'int'; posible pérdida de datos
+          with
+          [
+              T=double
+          ]
+D:\UniversidadPDFs\TPV1\Esta vez de verdad\P2\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(40,32): warning C4244: 'return': conversión de 'T' a 'int'; posible pérdida de datos
+          with
+          [
+              T=double
+          ]
+  PowerUp.cpp
+D:\UniversidadPDFs\TPV1\Esta vez de verdad\P2\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(39,32): warning C4244: 'return': conversión de 'T' a 'int'; posible pérdida de datos
+          with
+          [
+              T=double
+          ]
+D:\UniversidadPDFs\TPV1\Esta vez de verdad\P2\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(40,32): warning C4244: 'return': conversión de 'T' a 'int'; posible pérdida de datos
+          with
+          [
+              T=double
+          ]
+  Wall.cpp
+D:\UniversidadPDFs\TPV1\Esta vez de verdad\P2\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(39,32): warning C4244: 'return': conversión de 'T' a 'int'; posible pérdida de datos
+          with
+          [
+              T=double
+          ]
+D:\UniversidadPDFs\TPV1\Esta vez de verdad\P2\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(40,32): warning C4244: 'return': conversión de 'T' a 'int'; posible pérdida de datos
+          with
+          [
+              T=double
+          ]
+  Main.cpp
+D:\UniversidadPDFs\TPV1\Esta vez de verdad\P2\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(39,32): warning C4244: 'return': conversión de 'T' a 'int'; posible pérdida de datos
+          with
+          [
+              T=double
+          ]
+D:\UniversidadPDFs\TPV1\Esta vez de verdad\P2\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(40,32): warning C4244: 'return': conversión de 'T' a 'int'; posible pérdida de datos
+          with
+          [
+              T=double
+          ]
+D:\UniversidadPDFs\TPV1\Esta vez de verdad\P2\CarGame\CarGameCode\Main.cpp(13,15): warning C4244: 'argumento': conversión de 'time_t' a 'unsigned int'; posible pérdida de datos
+  Generando código...
   CarGame.vcxproj -> D:\UniversidadPDFs\TPV1\Esta vez de verdad\P2\bin\CarGamePr1Debug.exe

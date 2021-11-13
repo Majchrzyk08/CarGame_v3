@@ -93,6 +93,7 @@ public:
     void switchHelp() { help_ = !help_; }
     void vic(bool i) { victory_ = i; }
 
+    bool isRebased(GameObject* go);
     SDL_Rect getCarColl() { return car->getCollider(); }
     void gotHit();
     void gotPower();
