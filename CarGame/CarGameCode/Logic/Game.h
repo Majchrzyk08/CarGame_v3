@@ -17,7 +17,8 @@
 
 #include "GameObjects/Car.h"
 #include "GameObjects/Wall.h"
-#include "GameObjects/PowerUp.h"
+#include "GameObjects/PowerUp.h"s
+#include "GameObjects/Coin.h"
 #include "GameObjects/Meta.h"
 
 #include "GameObjectContainer.h"
@@ -51,6 +52,7 @@ private:
 
     int nObstacles_;
     int nPowerups;
+    int nCoins;
     
     TextureContainer *textureContainer;
     SDL_Renderer* renderer = nullptr;
@@ -67,7 +69,7 @@ public:
     const unsigned int WALL_WIDTH = 50;
     const unsigned int WALL_HEIGHT = 50;
 
-    Game(string name, int width, int height, int roadLength, int obstacles, int powerups = 0);
+    Game(string name, int width, int height, int roadLength, int obstacles, int powerups = 0, int coins = 0);
     ~Game();
 
     void startGame();
@@ -81,6 +83,7 @@ public:
     int getWindowWidth();
     int getWindowHeight();
     int getRoadLength() { return roadLength; };
+    int getCarCoinsNumber() {return car->getCoinsNumber()};
 
     Point2D<int> getOrigin();
 
@@ -108,6 +111,7 @@ public:
     int getHeight() { return height; }
 
     void addObject(GameObject* go);
+    void shoot();
     bool objectHasCollision(GameObject* go);
     vector<Collider*> getCollisions(GameObject* go) { return container->getCollisions(go); }
 };

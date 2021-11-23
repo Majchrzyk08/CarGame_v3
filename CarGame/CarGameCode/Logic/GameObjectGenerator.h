@@ -8,11 +8,13 @@ class GameObjectGenerator {
     void static addInRandomPosition(Game *game, GameObject *o);
 
 public:
-    static void generate(Game *game, int N_ROCKS = 0, int N_HEARTS = 0){
+    static void generate(Game *game, int N_ROCKS = 0, int N_HEARTS = 0, int N_COINS = 0){
         for(int i = 0; i < N_ROCKS; i++)
             addInRandomPosition(game, new Wall(game));
         for (int i = 0; i < N_HEARTS; i++)
             addInRandomPosition(game, new PowerUp(game));
+        for (int i = 0; i < N_COINS; i++)
+            addInRandomPosition(game, new Coin(game));
     }   
 };
 

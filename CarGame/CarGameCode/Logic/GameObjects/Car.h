@@ -22,12 +22,13 @@ private:
     const int VSPEED = 5;
     const int MAX_SPEED = 10;
     const int INITIAL_POWER = 3;
+    const int INITIAL_COINS = 3;
 
     //variables para movimiento
     double vel_ = 0;
     int vmove = 0;
     int hmove = 0;
-    
+    int coins = INITIAL_COINS;
     int power_ = INITIAL_POWER;
 
 public:
@@ -39,9 +40,12 @@ public:
 
     double getVel() { return vel_; }
     int getPower() { return power_; }
+    int getCoinsNumber() { return coins; } 
 
     void gotHit();
     void gotPower();
+    void gotCoin();
+    void onShoot() { coins -= 1; };
 
     virtual SDL_Rect getCenter();
 

@@ -11,6 +11,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="CarGameCode\Logic\GameObjects\Bullet.cpp" />
     <ClCompile Include="CarGameCode\Control\Commands\AccCommand.cpp" />
     <ClCompile Include="CarGameCode\Control\Commands\DebugCommand.cpp" />
     <ClCompile Include="CarGameCode\Control\Commands\HelpCommand.cpp" />
@@ -31,8 +32,11 @@
     <ClCompile Include="CarGameCode\Main.cpp" />
     <ClCompile Include="CarGameCode\View\Infobar.cpp" />
     <ClCompile Include="CarGameCode\View\Texture.cpp" />
+    <ClCompile Include="CarGameCode\Control\Commands\ShootComand.cpp" />
+    <ClCompile Include="CarGameCode\Logic\GameObjects\Coin.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="CarGameCode\Logic\GameObjects\Bullet.h" />
     <ClInclude Include="CarGameCode\Control\CommandFactory.h" />
     <ClInclude Include="CarGameCode\Control\Commands\AccCommand.h" />
     <ClInclude Include="CarGameCode\Control\Commands\Command.h" />
@@ -60,6 +64,8 @@
     <ClInclude Include="CarGameCode\View\Texture.h" />
     <ClInclude Include="CarGameCode\View\TextureContainer.h" />
     <ClInclude Include="checkML.h" />
+    <ClInclude Include="CarGameCode\Control\Commands\ShootCommand.h" />
+    <ClInclude Include="CarGameCode\Logic\GameObjects\Coin.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="CarGameCode\Images\barrel.png" />

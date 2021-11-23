@@ -3,8 +3,9 @@
 //
 
 #include "Game.h"
+#include "GameObjects/Bullet.h"
 
-Game::Game(string name, int width, int height, int roadLength, int obstacles, int powerups) {
+Game::Game(string name, int width, int height, int roadLength, int obstacles, int powerups, int coins) {
     this->name = name;
     this->roadLength = roadLength;
     this->width = width;
@@ -13,6 +14,7 @@ Game::Game(string name, int width, int height, int roadLength, int obstacles, in
     font = new Font("../Images/Monospace.ttf", 12);
     nObstacles_ = obstacles;
     nPowerups = powerups;
+    nCoins = coins;
     record_ = 0;
 }
 
@@ -25,7 +27,7 @@ void Game::startGame() {
     container->add(goal_);
     car = new Car(this); car->setDimension(CAR_WIDTH, CAR_HEIGHT); car->setPosition(car->getWidth(), height/ 2.0);
     container->add(car);
-    GameObjectGenerator::generate(this, nObstacles_, nPowerups);
+    GameObjectGenerator::generate(this, nObstacles_, nPowerups, nCoins);
 }
 
 string Game::getGameName() {
@@ -145,6 +147,13 @@ void Game::carAccNdec(int i) {
 void Game::addObject(GameObject* go) {
     container->add(go);
 }
+
+bool Game::buy(int cost) {
+    car->onShoot();
+    Bullet bullet = new Bullet();
+    //crear nuevo Bullet - anadir a container
+}
+
 
 bool Game::objectHasCollision(GameObject* go) {
     return container->getCollisions(go).size() > 0;

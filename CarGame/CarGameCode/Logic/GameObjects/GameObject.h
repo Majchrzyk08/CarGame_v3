@@ -13,6 +13,12 @@ static int WALL_HEIGHT = 50;
 static int POWERUP_WIDTH = 40;
 static int POWERUP_HEIGHT = 40;
 
+static int COIN_WIDTH = 20;
+static int COIN_HEIGHT = 20;
+
+static int BULLET_WIDTH = 20;
+static int BULLET_HEIGHT = 5;
+
 class GameObject : public Collider{
 
     Point2D<double> pos;

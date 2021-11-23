@@ -76,7 +76,11 @@ void Car::gotHit() {
     vel_=0;
 }
 void Car::gotPower() {
-    if (power_ + 1 <= INITIAL_POWER)power_ += 1;
+   power_ += 1;
+}
+
+void Car::gotCoin() {
+    coins += 1;
 }
 
 void Car::upNdown(int i) {

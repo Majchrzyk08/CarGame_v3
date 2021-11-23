@@ -15,6 +15,7 @@ void Infobar::drawInfo() {
         "Distance: " + to_string(game->distance_) + "  " +
         "Speed: " + to_string((int)game->car->getVel()) + "  " +
         "Power: " + to_string(game->car->getPower()) + "  " +
+        "Coins: " + to_string(game->car->getCoinsNumber()) + " " +
         "Time: " + aux + "  " +
         "Objs: " + " [" + to_string(GoodObject::instances) + ", " + to_string(BadObject::instances) + "]";
     string s2 = "State: Playing"; // esto deberia pillar el nombre de la variable directamente?
