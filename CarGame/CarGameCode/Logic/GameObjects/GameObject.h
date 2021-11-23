@@ -7,6 +7,12 @@
 
 class Game;
 
+static int WALL_WIDTH = 50;
+static int WALL_HEIGHT = 50;
+
+static int POWERUP_WIDTH = 40;
+static int POWERUP_HEIGHT = 40;
+
 class GameObject : public Collider{
 
     Point2D<double> pos;

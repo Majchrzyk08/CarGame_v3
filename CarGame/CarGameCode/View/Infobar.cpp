@@ -8,13 +8,15 @@ void Infobar::drawInfo() {
                      int(game->font->getSize() * 1.8) };
     Box(rect, BLACK).render(game->renderer);
 
+    string aux;
+    aux.append(to_string(game->time_), 0, 5);
     string s1 = "Pos: " + to_string(int(game->car->getX())) + " "
         + to_string(int(game->car->getY())) + "  " +
         "Distance: " + to_string(game->distance_) + "  " +
         "Speed: " + to_string((int)game->car->getVel()) + "  " +
         "Power: " + to_string(game->car->getPower()) + "  " +
-        "Time: " + to_string((int)game->time_) + "  " +
-        "Obstacles: " + to_string(BadObject::instances);
+        "Time: " + aux + "  " +
+        "Objs: " + " [" + to_string(GoodObject::instances) + ", " + to_string(BadObject::instances) + "]";
     string s2 = "State: Playing"; // esto deberia pillar el nombre de la variable directamente?
 
     game->renderText(s1, x, y);
@@ -70,10 +72,13 @@ void Infobar::drawState() {
             s1 = "Game Over!";
         }
         else {
-            string aux;
+            string timeToPrint;
+            timeToPrint.append(to_string(game->time_), 0, 5);
+            string recordToPrint;
+            recordToPrint.append(to_string(game->record_), 0, 5);
             s1 = "Congratulations!";
             s2 = "User wins";
-            s3 = "Time: " + to_string((int)game->time_)+ " Record: " + to_string((int)game->record_);
+            s3 = "Time: " + timeToPrint + " Record: " + recordToPrint;
         }
 
         string s5 = "State: GameOver";

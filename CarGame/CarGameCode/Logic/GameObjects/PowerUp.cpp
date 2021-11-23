@@ -1,6 +1,7 @@
 #include "../Game.h"
 
 PowerUp::PowerUp(Game* g) : GoodObject(g) {
+	this->setDimension(POWERUP_WIDTH, POWERUP_HEIGHT);
 	texture = nullptr;
 	GoodObject::onEnter();
 }

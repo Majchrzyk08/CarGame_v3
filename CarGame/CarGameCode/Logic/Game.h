@@ -80,6 +80,7 @@ public:
 
     int getWindowWidth();
     int getWindowHeight();
+    int getRoadLength() { return roadLength; };
 
     Point2D<int> getOrigin();
 
