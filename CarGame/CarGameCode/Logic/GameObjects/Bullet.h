@@ -3,12 +3,22 @@
 
 class Bullet : public GameObject {
 
+private:
+	const int SPEED = 15;
+	const int LIFE_LENGTH = 700;
+	int counter = 0;
+
+protected:
+	bool alive;
+
 public:
 	Bullet(Game* g);
 	~Bullet();
 
-	void draw();
-	void update() override {};
+	void gotHit();
+	void draw() override;
+	void update() override;
+	bool toDelete() override;
 
 
 };

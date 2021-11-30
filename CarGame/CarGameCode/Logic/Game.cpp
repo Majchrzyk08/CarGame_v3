@@ -144,14 +144,26 @@ void Game::carAccNdec(int i) {
     if(car!=nullptr) car->accelerateNdecelerate(i);
 }
 
+int Game::getXOfTheFrontOfTheCar()
+{
+    return car->getCenter().x;
+}
+
+int Game::getYOfTheFrontOfTheCar()
+{
+    return car->getCenter().y;
+}
+
 void Game::addObject(GameObject* go) {
     container->add(go);
 }
 
 bool Game::buy(int cost) {
-    car->onShoot();
-    Bullet bullet = new Bullet();
-    //crear nuevo Bullet - anadir a container
+    if (car->getCoinsNumber() >= 1) {
+        car->onShoot(); 
+        return true;
+    }
+    return false;
 }
 
 

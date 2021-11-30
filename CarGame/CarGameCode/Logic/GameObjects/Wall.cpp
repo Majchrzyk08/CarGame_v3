@@ -1,4 +1,5 @@
 #include "../Game.h"
+#include "Bullet.h"
 
 Wall::Wall(Game* g) : BadObject(g) {
 	texture = nullptr;
@@ -16,6 +17,12 @@ void Wall::draw() {
 
 bool Wall::receiveCarCollision(Car* c) {
 	c->gotHit();
+	alive = false;
+	return true;
+}
+
+bool Wall::receiveBulletCollision(Bullet* b) {
+	b->gotHit();
 	alive = false;
 	return true;
 }

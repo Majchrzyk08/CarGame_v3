@@ -9,4 +9,5 @@ public:
     void draw();
 
     bool receiveCarCollision(Car* c);
+    bool receiveBulletCollision(Bullet* b);
 };

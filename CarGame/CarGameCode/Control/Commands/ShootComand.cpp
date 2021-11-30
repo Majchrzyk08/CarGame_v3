@@ -1,4 +1,5 @@
 #include "ShootCommand.h"
+#include "../../Logic/GameObjects/Bullet.h"
 
 bool ShootCommand::parse(SDL_Event& e) {
 	if (e.type == SDL_KEYDOWN && e.key.keysym.sym == SDLK_s)return true;
@@ -6,7 +7,9 @@ bool ShootCommand::parse(SDL_Event& e) {
 }
 
 void ShootCommand::execute() {
-	if (game->buy(cost)) {
-		game->addObject(new b);
+	if (game->buy(1)) { 
+		Bullet* bullet = new Bullet(game);
+		bullet->setPosition(game->getXOfTheFrontOfTheCar(), game->getYOfTheFrontOfTheCar());
+		game->addObject(bullet);
 	}
 }

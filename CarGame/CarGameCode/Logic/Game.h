@@ -17,7 +17,7 @@
 
 #include "GameObjects/Car.h"
 #include "GameObjects/Wall.h"
-#include "GameObjects/PowerUp.h"s
+#include "GameObjects/PowerUp.h"
 #include "GameObjects/Coin.h"
 #include "GameObjects/Meta.h"
 
@@ -83,7 +83,7 @@ public:
     int getWindowWidth();
     int getWindowHeight();
     int getRoadLength() { return roadLength; };
-    int getCarCoinsNumber() {return car->getCoinsNumber()};
+    int getCarCoinsNumber() { return car->getCoinsNumber(); };
 
     Point2D<int> getOrigin();
 
@@ -103,15 +103,18 @@ public:
     void vic(bool i) { victory_ = i; }
 
     bool isRebased(GameObject* go);
+    bool buy(int cost);
 
     void carUpNdown(int i);
     void carAccNdec(int i);
 
     int getRoadlength() { return roadLength; }
     int getHeight() { return height; }
+    int getXOfTheFrontOfTheCar();
+    int getYOfTheFrontOfTheCar();
+
 
     void addObject(GameObject* go);
-    void shoot();
     bool objectHasCollision(GameObject* go);
     vector<Collider*> getCollisions(GameObject* go) { return container->getCollisions(go); }
 };
