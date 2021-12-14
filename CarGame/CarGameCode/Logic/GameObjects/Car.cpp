@@ -36,14 +36,27 @@ void Car::update() {
     case 0:
         break;
     case 1:
-        vel_ *= ACCELERATION;
-        if (vel_ > MAX_SPEED) {
-            vel_ = MAX_SPEED;
-            hmove = 0;
+        if (decreasingCounter == 0) {
+            vel_ *= ACCELERATION;
+            if (vel_ > MAX_SPEED) {
+                vel_ = MAX_SPEED;
+                hmove = 0;
+            }
+            else if (vel_ == 0) {
+                vel_ = 1;
+                hmove = 0;
+            }
         }
-        else if (vel_ == 0) {
-            vel_ = 1;
-            hmove = 0;
+        else { 
+            if (decreasingCounter > 0) {
+                vel_ = TURBO_SPEED;
+                decreasingCounter -= 1;  
+            }
+            else {
+                vel_ = 10;
+                hmove = 0;
+            }
+
         }
         break;
     case -1:
@@ -81,6 +94,12 @@ void Car::gotPower() {
 
 void Car::gotCoin() {
     coins += 1;
+}
+
+void Car::gotTurbo()
+{
+    decreasingCounter = 150;
+    accelerateNdecelerate(1);
 }
 
 void Car::upNdown(int i) {

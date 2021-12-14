@@ -5,7 +5,7 @@
 #include "Game.h"
 #include "GameObjects/Bullet.h"
 
-Game::Game(string name, int width, int height, int roadLength, int obstacles, int powerups, int coins) {
+Game::Game(string name, int width, int height, int roadLength, int obstacles, int powerups, int coins, int turbos, int superRocks) {
     this->name = name;
     this->roadLength = roadLength;
     this->width = width;
@@ -15,6 +15,8 @@ Game::Game(string name, int width, int height, int roadLength, int obstacles, in
     nObstacles_ = obstacles;
     nPowerups = powerups;
     nCoins = coins;
+    nTurbos = turbos;
+    nSuperRocks = superRocks;
     record_ = 0;
 }
 
@@ -27,7 +29,7 @@ void Game::startGame() {
     container->add(goal_);
     car = new Car(this); car->setDimension(CAR_WIDTH, CAR_HEIGHT); car->setPosition(car->getWidth(), height/ 2.0);
     container->add(car);
-    GameObjectGenerator::generate(this, nObstacles_, nPowerups, nCoins);
+    GameObjectGenerator::generate(this, nObstacles_, nPowerups, nCoins, nTurbos, nSuperRocks);
 }
 
 string Game::getGameName() {
@@ -144,9 +146,9 @@ void Game::carAccNdec(int i) {
     if(car!=nullptr) car->accelerateNdecelerate(i);
 }
 
-int Game::getXOfTheFrontOfTheCar()
+int Game::getXOfTheCar()
 {
-    return car->getCenter().x;
+    return car->getX();
 }
 
 int Game::getYOfTheFrontOfTheCar()

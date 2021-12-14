@@ -9,7 +9,7 @@ bool ShootCommand::parse(SDL_Event& e) {
 void ShootCommand::execute() {
 	if (game->buy(1)) { 
 		Bullet* bullet = new Bullet(game);
-		bullet->setPosition(game->getXOfTheFrontOfTheCar(), game->getYOfTheFrontOfTheCar());
+		bullet->setPosition(game->getXOfTheCar(), game->getYOfTheFrontOfTheCar());
 		game->addObject(bullet);
 	}
 }

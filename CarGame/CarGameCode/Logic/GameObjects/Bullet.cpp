@@ -16,7 +16,7 @@ Bullet::~Bullet()
 
 void Bullet::draw()
 {
-    //draw it!
+    drawTexture(game->getTexture(bulletTexture));
 }
 
 void Bullet::update()

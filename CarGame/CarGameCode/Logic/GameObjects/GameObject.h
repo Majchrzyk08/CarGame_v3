@@ -1,3 +1,18 @@
+/*
+STEPS CUANDO CREO NUEVO OBJETO:
+Jak dodajemy obiekt to co trzeba zrobic:
+-dodac do texture containera i zmienic liczbe tekstur
+-stworzyc w gameObjectGenerator
+-dac include w game.h
+-zmienic konstruktor gry w game.h i game.cpp
+-w startGame modyfikacja wywowalnia generare
+-w Mainie zdefiniowac ile ma sie stworzyc
+*/
+
+
+
+
+
 #ifndef CARGAME_GAMEOBJECT_H
 #define CARGAME_GAMEOBJECT_H
 
@@ -18,6 +33,12 @@ static int COIN_HEIGHT = 20;
 
 static int BULLET_WIDTH = 20;
 static int BULLET_HEIGHT = 5;
+
+static int TURBO_WIDTH = 80;
+static int TURBO_HEIGHT = 40;
+
+static int SUPERROCK_WIDTH = 160;
+static int SUPERROCK_HEIGHT = 80;
 
 class GameObject : public Collider{
 

@@ -1,12 +1,273 @@
-﻿  ShootComand.cpp
-C:\Users\Acer\Desktop\STUDIA\SEMESTR V\P2\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(51,32): warning C4244: 'return': conversion from 'T' to 'int', possible loss of data
+﻿  AccCommand.cpp
+C:\Users\Acer\Desktop\STUDIA\SEMESTR V\P2\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(72,32): warning C4244: 'return': conversion from 'T' to 'int', possible loss of data
           with
           [
               T=double
           ]
-C:\Users\Acer\Desktop\STUDIA\SEMESTR V\P2\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(52,32): warning C4244: 'return': conversion from 'T' to 'int', possible loss of data
+C:\Users\Acer\Desktop\STUDIA\SEMESTR V\P2\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(73,32): warning C4244: 'return': conversion from 'T' to 'int', possible loss of data
           with
           [
               T=double
           ]
+  DebugCommand.cpp
+C:\Users\Acer\Desktop\STUDIA\SEMESTR V\P2\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(72,32): warning C4244: 'return': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=double
+          ]
+C:\Users\Acer\Desktop\STUDIA\SEMESTR V\P2\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(73,32): warning C4244: 'return': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=double
+          ]
+  HelpCommand.cpp
+C:\Users\Acer\Desktop\STUDIA\SEMESTR V\P2\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(72,32): warning C4244: 'return': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=double
+          ]
+C:\Users\Acer\Desktop\STUDIA\SEMESTR V\P2\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(73,32): warning C4244: 'return': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=double
+          ]
+  MoveCommand.cpp
+C:\Users\Acer\Desktop\STUDIA\SEMESTR V\P2\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(72,32): warning C4244: 'return': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=double
+          ]
+C:\Users\Acer\Desktop\STUDIA\SEMESTR V\P2\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(73,32): warning C4244: 'return': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=double
+          ]
+  QuitCommand.cpp
+C:\Users\Acer\Desktop\STUDIA\SEMESTR V\P2\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(72,32): warning C4244: 'return': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=double
+          ]
+C:\Users\Acer\Desktop\STUDIA\SEMESTR V\P2\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(73,32): warning C4244: 'return': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=double
+          ]
+  ShootComand.cpp
+C:\Users\Acer\Desktop\STUDIA\SEMESTR V\P2\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(72,32): warning C4244: 'return': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=double
+          ]
+C:\Users\Acer\Desktop\STUDIA\SEMESTR V\P2\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(73,32): warning C4244: 'return': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=double
+          ]
+  StartCommand.cpp
+C:\Users\Acer\Desktop\STUDIA\SEMESTR V\P2\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(72,32): warning C4244: 'return': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=double
+          ]
+C:\Users\Acer\Desktop\STUDIA\SEMESTR V\P2\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(73,32): warning C4244: 'return': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=double
+          ]
+  ViewController.cpp
+C:\Users\Acer\Desktop\STUDIA\SEMESTR V\P2\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(72,32): warning C4244: 'return': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=double
+          ]
+C:\Users\Acer\Desktop\STUDIA\SEMESTR V\P2\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(73,32): warning C4244: 'return': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=double
+          ]
+  Game.cpp
+C:\Users\Acer\Desktop\STUDIA\SEMESTR V\P2\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(72,32): warning C4244: 'return': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=double
+          ]
+C:\Users\Acer\Desktop\STUDIA\SEMESTR V\P2\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(73,32): warning C4244: 'return': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=double
+          ]
+C:\Users\Acer\Desktop\STUDIA\SEMESTR V\P2\CarGame\CarGameCode\Logic\Game.cpp(27,31): warning C4244: '=': conversion from 'Uint32' to 'float', possible loss of data
+  GameObjectContainer.cpp
+C:\Users\Acer\Desktop\STUDIA\SEMESTR V\P2\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(72,32): warning C4244: 'return': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=double
+          ]
+C:\Users\Acer\Desktop\STUDIA\SEMESTR V\P2\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(73,32): warning C4244: 'return': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=double
+          ]
+C:\Users\Acer\Desktop\STUDIA\SEMESTR V\P2\CarGame\CarGameCode\Logic\GameObjectContainer.cpp(30,11): warning C4018: '<': signed/unsigned mismatch
+  GameObjectGenerator.cpp
+C:\Users\Acer\Desktop\STUDIA\SEMESTR V\P2\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(72,32): warning C4244: 'return': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=double
+          ]
+C:\Users\Acer\Desktop\STUDIA\SEMESTR V\P2\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(73,32): warning C4244: 'return': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=double
+          ]
+  BadObject.cpp
+C:\Users\Acer\Desktop\STUDIA\SEMESTR V\P2\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(72,32): warning C4244: 'return': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=double
+          ]
+C:\Users\Acer\Desktop\STUDIA\SEMESTR V\P2\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(73,32): warning C4244: 'return': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=double
+          ]
+  Bullet.cpp
+C:\Users\Acer\Desktop\STUDIA\SEMESTR V\P2\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(72,32): warning C4244: 'return': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=double
+          ]
+C:\Users\Acer\Desktop\STUDIA\SEMESTR V\P2\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(73,32): warning C4244: 'return': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=double
+          ]
+  Car.cpp
+C:\Users\Acer\Desktop\STUDIA\SEMESTR V\P2\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(72,32): warning C4244: 'return': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=double
+          ]
+C:\Users\Acer\Desktop\STUDIA\SEMESTR V\P2\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(73,32): warning C4244: 'return': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=double
+          ]
+  Coin.cpp
+C:\Users\Acer\Desktop\STUDIA\SEMESTR V\P2\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(72,32): warning C4244: 'return': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=double
+          ]
+C:\Users\Acer\Desktop\STUDIA\SEMESTR V\P2\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(73,32): warning C4244: 'return': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=double
+          ]
+  GameObject.cpp
+C:\Users\Acer\Desktop\STUDIA\SEMESTR V\P2\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(72,32): warning C4244: 'return': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=double
+          ]
+C:\Users\Acer\Desktop\STUDIA\SEMESTR V\P2\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(73,32): warning C4244: 'return': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=double
+          ]
+C:\Users\Acer\Desktop\STUDIA\SEMESTR V\P2\CarGame\CarGameCode\Logic\GameObjects\GameObject.cpp(5,9): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\Users\Acer\Desktop\STUDIA\SEMESTR V\P2\CarGame\CarGameCode\Logic\GameObjects\GameObject.cpp(6,9): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+  GoodObject.cpp
+C:\Users\Acer\Desktop\STUDIA\SEMESTR V\P2\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(72,32): warning C4244: 'return': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=double
+          ]
+C:\Users\Acer\Desktop\STUDIA\SEMESTR V\P2\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(73,32): warning C4244: 'return': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=double
+          ]
+  Meta.cpp
+C:\Users\Acer\Desktop\STUDIA\SEMESTR V\P2\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(72,32): warning C4244: 'return': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=double
+          ]
+C:\Users\Acer\Desktop\STUDIA\SEMESTR V\P2\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(73,32): warning C4244: 'return': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=double
+          ]
+  PowerUp.cpp
+C:\Users\Acer\Desktop\STUDIA\SEMESTR V\P2\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(72,32): warning C4244: 'return': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=double
+          ]
+C:\Users\Acer\Desktop\STUDIA\SEMESTR V\P2\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(73,32): warning C4244: 'return': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=double
+          ]
+  SuperRock.cpp
+C:\Users\Acer\Desktop\STUDIA\SEMESTR V\P2\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(72,32): warning C4244: 'return': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=double
+          ]
+C:\Users\Acer\Desktop\STUDIA\SEMESTR V\P2\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(73,32): warning C4244: 'return': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=double
+          ]
+  Generating Code...
+  Compiling...
+  Turbo.cpp
+C:\Users\Acer\Desktop\STUDIA\SEMESTR V\P2\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(72,32): warning C4244: 'return': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=double
+          ]
+C:\Users\Acer\Desktop\STUDIA\SEMESTR V\P2\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(73,32): warning C4244: 'return': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=double
+          ]
+  Wall.cpp
+C:\Users\Acer\Desktop\STUDIA\SEMESTR V\P2\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(72,32): warning C4244: 'return': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=double
+          ]
+C:\Users\Acer\Desktop\STUDIA\SEMESTR V\P2\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(73,32): warning C4244: 'return': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=double
+          ]
+  Main.cpp
+C:\Users\Acer\Desktop\STUDIA\SEMESTR V\P2\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(72,32): warning C4244: 'return': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=double
+          ]
+C:\Users\Acer\Desktop\STUDIA\SEMESTR V\P2\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(73,32): warning C4244: 'return': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=double
+          ]
+C:\Users\Acer\Desktop\STUDIA\SEMESTR V\P2\CarGame\CarGameCode\Main.cpp(13,15): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  Infobar.cpp
+C:\Users\Acer\Desktop\STUDIA\SEMESTR V\P2\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(72,32): warning C4244: 'return': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=double
+          ]
+C:\Users\Acer\Desktop\STUDIA\SEMESTR V\P2\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(73,32): warning C4244: 'return': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=double
+          ]
+  Generating Code...
   CarGame.vcxproj -> C:\Users\Acer\Desktop\STUDIA\SEMESTR V\P2\bin\CarGamePr1Debug.exe

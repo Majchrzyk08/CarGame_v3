@@ -21,6 +21,7 @@ private:
     const double DECELERATION = 0.9;
     const int VSPEED = 5;
     const int MAX_SPEED = 10;
+    const int TURBO_SPEED = 20;
     const int INITIAL_POWER = 3;
     const int INITIAL_COINS = 3;
 
@@ -30,6 +31,7 @@ private:
     int hmove = 0;
     int coins = INITIAL_COINS;
     int power_ = INITIAL_POWER;
+    int decreasingCounter = 0;
 
 public:
     Car(Game *game);
@@ -45,6 +47,7 @@ public:
     void gotHit();
     void gotPower();
     void gotCoin();
+    void gotTurbo();
     void onShoot() { coins -= 1; };
 
     virtual SDL_Rect getCenter();
