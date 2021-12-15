@@ -17,4 +17,9 @@ bool BadObject::toDelete() {
     return !alive || game->isRebased(this);
 }
 
+bool BadObject::wave(int value = 150) {
+    this->setPosition(getX() + value, getY());
+    return true;
+}
+
 int BadObject::instances = 0;

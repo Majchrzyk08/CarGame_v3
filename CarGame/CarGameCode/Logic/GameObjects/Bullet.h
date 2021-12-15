@@ -1,6 +1,9 @@
 #pragma once
 #include "GameObject.h"
 
+static int BULLET_WIDTH = 20;
+static int BULLET_HEIGHT = 5;
+
 class Bullet : public GameObject {
 
 private:

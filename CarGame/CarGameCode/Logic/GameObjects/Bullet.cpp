@@ -4,7 +4,6 @@
 
 Bullet::Bullet(Game* g) : GameObject(g) {
     this->setDimension(BULLET_WIDTH, BULLET_HEIGHT);
-    texture = nullptr;
     this->onEnter();
     alive = true;
 }

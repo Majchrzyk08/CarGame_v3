@@ -1,3 +1,10 @@
+/* PASOS PARA CREAR NEW COMMAND
+Kroki, by stworzyc nowa komende:
+-include w commandFactory
+-dodac komende do commandFactory viewController
+*/
+
+
 #ifndef CARGAME_COMMAND_H
 #define CARGAME_COMMAND_H
 

@@ -1,7 +1,6 @@
 #include "../Game.h"
 
 Meta::Meta(Game* g) : GameObject(g) {
-	texture = nullptr;
 }
 
 Meta::~Meta() {}

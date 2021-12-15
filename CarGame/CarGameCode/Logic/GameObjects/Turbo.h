@@ -1,6 +1,10 @@
 #pragma once
 #include "GoodObject.h"
 
+
+static int TURBO_WIDTH = 80;
+static int TURBO_HEIGHT = 40;
+
 class Turbo : public GoodObject {
 
 public:

@@ -86,6 +86,12 @@
     <ClCompile Include="CarGameCode\Logic\GameObjects\SuperRock.cpp">
       <Filter>Archivos de código fuente</Filter>
     </ClCompile>
+    <ClCompile Include="CarGameCode\Logic\GameObjects\Oil.cpp">
+      <Filter>Archivos de código fuente</Filter>
+    </ClCompile>
+    <ClCompile Include="CarGameCode\Control\Commands\WaveCommand.cpp">
+      <Filter>Archivos de código fuente</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CarGameCode\Logic\Game.h" />
@@ -120,6 +126,8 @@
     <ClInclude Include="CarGameCode\Logic\GameObjects\Bullet.h" />
     <ClInclude Include="CarGameCode\Logic\GameObjects\Turbo.h" />
     <ClInclude Include="CarGameCode\Logic\GameObjects\SuperRock.h" />
+    <ClInclude Include="CarGameCode\Logic\GameObjects\Oil.h" />
+    <ClInclude Include="CarGameCode\Control\Commands\WaveCommand.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="CarGameCode\Images\oil.png">

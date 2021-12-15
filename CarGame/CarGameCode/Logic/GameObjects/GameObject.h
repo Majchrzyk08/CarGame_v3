@@ -22,24 +22,6 @@ Jak dodajemy obiekt to co trzeba zrobic:
 
 class Game;
 
-static int WALL_WIDTH = 50;
-static int WALL_HEIGHT = 50;
-
-static int POWERUP_WIDTH = 40;
-static int POWERUP_HEIGHT = 40;
-
-static int COIN_WIDTH = 20;
-static int COIN_HEIGHT = 20;
-
-static int BULLET_WIDTH = 20;
-static int BULLET_HEIGHT = 5;
-
-static int TURBO_WIDTH = 80;
-static int TURBO_HEIGHT = 40;
-
-static int SUPERROCK_WIDTH = 160;
-static int SUPERROCK_HEIGHT = 80;
-
 class GameObject : public Collider{
 
     Point2D<double> pos;
@@ -52,7 +34,7 @@ protected:
     void drawTexture(Texture* texture);
 public:
 
-    GameObject(Game *game): game(game){};
+    GameObject(Game *game);
     virtual ~GameObject(){};
 
     virtual void draw()=0;

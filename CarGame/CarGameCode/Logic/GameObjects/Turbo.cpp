@@ -3,8 +3,6 @@
 
 Turbo::Turbo(Game* g) : GoodObject(g) {
 	this->setDimension(TURBO_WIDTH, TURBO_HEIGHT);
-	texture = nullptr;
-	GoodObject::onEnter();
 }
 
 Turbo::~Turbo() { GoodObject::onDelete(); }

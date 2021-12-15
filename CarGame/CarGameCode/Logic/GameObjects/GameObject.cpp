@@ -19,6 +19,12 @@ void GameObject::drawTexture(Texture* texture) {
     texture->render(textureBox);
 }
 
+GameObject::GameObject(Game* game)
+{
+    this->game = game;
+    texture = nullptr;
+}
+
 void GameObject::drawDebug() {
     Box(getCollider(), RED).render(game->getRenderer());
     Box(getCenter(), BLUE).render(game->getRenderer());

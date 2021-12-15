@@ -8,7 +8,7 @@ class GameObjectGenerator {
     void static addInRandomPosition(Game *game, GameObject *o);
 
 public:
-    static void generate(Game *game, int N_ROCKS = 0, int N_HEARTS = 0, int N_COINS = 0, int N_TURBOS = 0, int N_SUPER_ROCKS = 0){
+    static void generate(Game *game, int N_ROCKS = 0, int N_HEARTS = 0, int N_COINS = 0, int N_TURBOS = 0, int N_SUPER_ROCKS = 0, int N_OILS = 0){
         for(int i = 0; i < N_ROCKS; i++)
             addInRandomPosition(game, new Wall(game));
         for (int i = 0; i < N_HEARTS; i++)
@@ -19,6 +19,8 @@ public:
             addInRandomPosition(game, new Turbo(game));
         for (int i = 0; i < N_SUPER_ROCKS; i++)
             addInRandomPosition(game, new SuperRock(game));
+        for (int i = 0; i < N_OILS; i++)
+            addInRandomPosition(game, new Oil(game));
     }   
 };
 

@@ -11,10 +11,13 @@ public:
     static int instances;
     BadObject(Game *game): GameObject(game) {
         alive = true;
+        this->onEnter();
     };
     ~BadObject() override = default;
     void update() override{};
     bool toDelete() override;
+
+    bool wave(int value) override;
 
     void onEnter() override;
     void onDelete() override;

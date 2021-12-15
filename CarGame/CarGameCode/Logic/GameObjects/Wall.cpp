@@ -2,8 +2,6 @@
 #include "Bullet.h"
 
 Wall::Wall(Game* g) : BadObject(g) {
-	texture = nullptr;
-	BadObject::onEnter();
 	this->setDimension(WALL_WIDTH, WALL_HEIGHT);
 }
 

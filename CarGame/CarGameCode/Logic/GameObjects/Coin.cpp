@@ -2,8 +2,6 @@
 
 Coin::Coin(Game* g) : GoodObject(g) {
 	this->setDimension(COIN_WIDTH, COIN_HEIGHT);
-	texture = nullptr;
-	GoodObject::onEnter();
 }
 
 Coin::~Coin() { GoodObject::onDelete(); }

@@ -36,6 +36,8 @@
     <ClCompile Include="CarGameCode\Logic\GameObjects\Coin.cpp" />
     <ClCompile Include="CarGameCode\Logic\GameObjects\Turbo.cpp" />
     <ClCompile Include="CarGameCode\Logic\GameObjects\SuperRock.cpp" />
+    <ClCompile Include="CarGameCode\Logic\GameObjects\Oil.cpp" />
+    <ClCompile Include="CarGameCode\Control\Commands\WaveCommand.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CarGameCode\Logic\GameObjects\Bullet.h" />
@@ -70,6 +72,8 @@
     <ClInclude Include="CarGameCode\Logic\GameObjects\Coin.h" />
     <ClInclude Include="CarGameCode\Logic\GameObjects\Turbo.h" />
     <ClInclude Include="CarGameCode\Logic\GameObjects\SuperRock.h" />
+    <ClInclude Include="CarGameCode\Logic\GameObjects\Oil.h" />
+    <ClInclude Include="CarGameCode\Control\Commands\WaveCommand.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="CarGameCode\Images\barrel.png" />

@@ -17,6 +17,7 @@ ViewController::ViewController(Game *_game) {
     commandFactory->add(new HelpCommand());
     commandFactory->add(new StartCommand());
     commandFactory->add(new QuitCommand());
+    commandFactory->add(new WaveCommand());
 
     game->setRenderer(renderer);
     game->loadTextures();

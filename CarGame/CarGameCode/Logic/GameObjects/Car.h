@@ -19,6 +19,7 @@ private:
 
     const double ACCELERATION = 1.3;
     const double DECELERATION = 0.9;
+    const double OIL_DECELERATION = 0.7;
     const int VSPEED = 5;
     const int MAX_SPEED = 10;
     const int TURBO_SPEED = 20;
@@ -47,8 +48,10 @@ public:
     void gotHit();
     void gotPower();
     void gotCoin();
+    void gotOil();
     void gotTurbo();
-    void onShoot() { coins -= 1; };
+    void onBuy(int cost) { coins -= cost; };
+    void multiplySpeed(double x) { vel_ *= x; };
 
     virtual SDL_Rect getCenter();
 

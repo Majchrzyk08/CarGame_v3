@@ -1,7 +1,6 @@
 #include "../Game.h"
 
 SuperRock::SuperRock(Game* g) : BadObject(g) {
-	texture = nullptr;
 	BadObject::onEnter();
 	this->setDimension(SUPERROCK_WIDTH, SUPERROCK_HEIGHT);
 }

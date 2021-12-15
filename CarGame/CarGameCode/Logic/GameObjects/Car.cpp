@@ -6,7 +6,6 @@
 #include "../Game.h"
 
 Car::Car(Game *game) : GameObject(game){
-    texture = nullptr;
 }
 
 void Car::update() {
@@ -86,7 +85,7 @@ void Car::gotHit() {
         game->changeState(GAMEOVER);
     }
     else power_--;
-    vel_=0;
+    vel_= 0;
 }
 void Car::gotPower() {
    power_ += 1;
@@ -94,6 +93,11 @@ void Car::gotPower() {
 
 void Car::gotCoin() {
     coins += 1;
+}
+
+void Car::gotOil()
+{
+    if(vel_*0.7 > 1)this->multiplySpeed(0.7);
 }
 
 void Car::gotTurbo()
