@@ -16,9 +16,8 @@ public:
     ~GoodObject() override = default;
     void update() override {};
     bool toDelete() override;
-
+    void setDead() { alive = false; };
     bool wave(int value) override;
-
     void onEnter() override;
     void onDelete() override;
     void static reset();

@@ -32,14 +32,29 @@ void Infobar::drawInfo() {
 }
 
 void Infobar::drawHelp() {
-    if (game->help_) {
-        int yh = game->font->getSize();
-        int i = 0;
-        for (auto s : game->help) {
-            game->renderText(s, yh/2, yh*(2+i));
-            i++;
+    if (game->currentState_ == MENU) {
+        if (game->help_) {
+            string s1 = "[SPACE] to start";
+            string s2 = "[h] for help";
+
+            int yh = game->font->getSize();
+
+            game->renderText(s1, yh / 2, yh * 2);
+            game->renderText(s2, yh / 2, yh * 3);
+        }
+
+    }
+    else if (game->currentState_ == RUNNING) {
+        if (game->help_) {
+            int yh = game->font->getSize();
+            int i = 0;
+            for (auto s : game->help) {
+                game->renderText(s, yh / 2, yh * (2 + i));
+                i++;
+            }
         }
     }
+   
 }
 
 void Infobar::drawState() {
@@ -62,8 +77,8 @@ void Infobar::drawState() {
         game->renderText(s5, game->font->getSize() / 2, game->height - game->font->getSize());
     }
     else if (game->currentState_ == GAMEOVER) {
-        if (game->record_ == 0)game->record_ = game->time_;
-        else if (game->time_ < game->record_)game->record_ = game->time_;
+        if (game->record_ == 0 && game->victory_ == true)game->record_ = game->time_;
+        else if (game->time_ < game->record_&& game->victory_ == true)game->record_ = game->time_;
 
         string s1 = " ";
         string s2 = " ";

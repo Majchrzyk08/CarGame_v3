@@ -16,9 +16,9 @@ public:
     ~BadObject() override = default;
     void update() override{};
     bool toDelete() override;
-
     bool wave(int value) override;
-
+    bool blast(int x, int y, SDL_Rect blastBox);
+    void setDead() { alive = false; };
     void onEnter() override;
     void onDelete() override;
     void static reset();

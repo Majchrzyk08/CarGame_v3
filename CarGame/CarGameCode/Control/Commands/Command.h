@@ -1,6 +1,6 @@
 /* PASOS PARA CREAR NEW COMMAND
 Kroki, by stworzyc nowa komende:
--include w commandFactory
+-include w commands.h
 -dodac komende do commandFactory viewController
 */
 

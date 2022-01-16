@@ -3,6 +3,7 @@
 
 class Car;
 class Bullet;
+#include "SDL.h"
 
 class Collider {
 
@@ -15,6 +16,9 @@ public:
         return false;
     };
     virtual bool wave(int value = 150) {
+        return false;
+    };
+    virtual bool blast(int x, int y, SDL_Rect blastBox) {
         return false;
     };
 

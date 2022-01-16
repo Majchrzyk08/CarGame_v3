@@ -10,7 +10,6 @@ Bullet::Bullet(Game* g) : GameObject(g) {
 
 Bullet::~Bullet()
 {
-    this->onDelete();
 }
 
 void Bullet::draw()

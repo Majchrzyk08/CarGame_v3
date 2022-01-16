@@ -4,7 +4,7 @@ Oil::Oil(Game* g) : BadObject(g) {
 	this->setDimension(OIL_WIDTH, OIL_HEIGHT);
 }
 
-Oil::~Oil() { BadObject::onDelete(); }
+Oil::~Oil() {  }
 
 void Oil::draw() {
 	if ((-game->getOrigin().getX()) + game->getWindowWidth() + getWidth() > getX()) { //calculo para saber cuando se tiene que empezar a dibujar dibujar

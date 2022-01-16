@@ -5,7 +5,7 @@ Wall::Wall(Game* g) : BadObject(g) {
 	this->setDimension(WALL_WIDTH, WALL_HEIGHT);
 }
 
-Wall::~Wall() { BadObject::onDelete(); }
+Wall::~Wall() {}
 
 void Wall::draw() {
 	if ((-game->getOrigin().getX()) + game->getWindowWidth() + getWidth()> getX()) { //calculo para saber cuando se tiene que empezar a dibujar dibujar
@@ -14,7 +14,7 @@ void Wall::draw() {
 }
 
 bool Wall::receiveCarCollision(Car* c) {
-	c->gotHit();
+	c->gotHit(1);
 	alive = false;
 	return true;
 }

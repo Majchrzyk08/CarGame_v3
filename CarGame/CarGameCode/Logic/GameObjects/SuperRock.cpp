@@ -5,7 +5,7 @@ SuperRock::SuperRock(Game* g) : BadObject(g) {
 	this->setDimension(SUPERROCK_WIDTH, SUPERROCK_HEIGHT);
 }
 
-SuperRock::~SuperRock() { BadObject::onDelete(); }
+SuperRock::~SuperRock() {  }
 
 void SuperRock::draw() {
 	if ((-game->getOrigin().getX()) + game->getWindowWidth() + getWidth() > getX()) { //calculo para saber cuando se tiene que empezar a dibujar dibujar
@@ -14,8 +14,9 @@ void SuperRock::draw() {
 }
 
 bool SuperRock::receiveCarCollision(Car* c) {
-	c->gotHit();
-	c->gotHit();
+
+    //# it's better to use a parameter goHit(HARM)
+	c->gotHit(2);
 	alive = false;
 	return true;
 }

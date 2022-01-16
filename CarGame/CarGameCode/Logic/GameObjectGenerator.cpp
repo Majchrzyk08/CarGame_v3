@@ -14,3 +14,20 @@ void GameObjectGenerator::addInRandomPosition(Game* game, GameObject* go) {
 	if (!game->objectHasCollision(go)) game->addObject(go);
 	else delete go;
 }
+
+void GameObjectGenerator::addInFrontOfTheCar(Game* game, GameObject* go) {
+	Point2D<int> pos;
+	int x = game->getXOfTheCar() + 450;
+	int y = int(game->getWindowHeight() / 2);
+	pos.setX(x);
+	pos.setY(y);
+	go->setPosition(pos.getX(), pos.getY());
+	if (!game->objectHasCollision(go)) game->addObject(go);
+	else delete go;
+}
+
+
+
+
+
+

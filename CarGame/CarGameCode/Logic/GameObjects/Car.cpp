@@ -79,12 +79,12 @@ void Car::draw() {
     drawTexture(game->getTexture(carTexture));
 }
 
-void Car::gotHit() {
-    if (power_ - 1 == 0) {
+void Car::gotHit(int harm) {
+    if (power_ - harm <= 0) {
         game->vic(false);
         game->changeState(GAMEOVER);
     }
-    else power_--;
+    else power_ -= harm;
     vel_= 0;
 }
 void Car::gotPower() {

@@ -15,14 +15,8 @@
 #include "../View/Box.h"
 #include "../View/Font.h"
 
-#include "GameObjects/Car.h"
-#include "GameObjects/Wall.h"
-#include "GameObjects/SuperRock.h"
-#include "GameObjects/Turbo.h"
-#include "GameObjects/Oil.h"
-#include "GameObjects/PowerUp.h"
-#include "GameObjects/Coin.h"
-#include "GameObjects/Meta.h"
+#include "GameObjects/objects.h"
+
 
 #include "GameObjectContainer.h"
 #include "GameObjectGenerator.h"
@@ -59,6 +53,7 @@ private:
     int nTurbos;
     int nSuperRocks;
     int nOils;
+    int nTrucks;
     
     TextureContainer *textureContainer;
     SDL_Renderer* renderer = nullptr;
@@ -71,11 +66,9 @@ private:
 public:
     const unsigned int CAR_WIDTH = 100;
     const unsigned  int CAR_HEIGHT = 50;
-    
-    const unsigned int WALL_WIDTH = 50;
-    const unsigned int WALL_HEIGHT = 50;
+   
 
-    Game(string name, int width, int height, int roadLength, int obstacles, int powerups = 0, int coins = 0, int turbos = 0, int superRocks = 0, int oils = 0);
+    Game(string name, int width, int height, int roadLength, int obstacles, int powerups = 0, int coins = 0, int turbos = 0, int superRocks = 0, int oils = 0, int trucks = 0);
     ~Game();
 
     void startGame();
@@ -113,6 +106,7 @@ public:
 
     void carUpNdown(int i);
     void carAccNdec(int i);
+    void deleteAllObjects();
 
     int getRoadlength() { return roadLength; }
     int getHeight() { return height; }

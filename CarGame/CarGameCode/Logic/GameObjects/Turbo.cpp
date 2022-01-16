@@ -5,7 +5,7 @@ Turbo::Turbo(Game* g) : GoodObject(g) {
 	this->setDimension(TURBO_WIDTH, TURBO_HEIGHT);
 }
 
-Turbo::~Turbo() { GoodObject::onDelete(); }
+Turbo::~Turbo() {}
 
 void Turbo::draw() {
 	if ((-game->getOrigin().getX()) + game->getWindowWidth() + getWidth() > getX()) { //calculo para saber cuando se tiene que empezar a dibujar dibujar

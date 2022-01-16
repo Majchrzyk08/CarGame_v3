@@ -4,8 +4,9 @@ Coin::Coin(Game* g) : GoodObject(g) {
 	this->setDimension(COIN_WIDTH, COIN_HEIGHT);
 }
 
-Coin::~Coin() { GoodObject::onDelete(); }
+Coin::~Coin() {}
 
+    //# You can reuse draw from gameObject
 void Coin::draw() {
 	if ((-game->getOrigin().getX()) + game->getWindowWidth() + getWidth() > getX()) { //calculo para saber cuando se tiene que empezar a dibujar dibujar
 		drawTexture(game->getTexture(coinTexture));

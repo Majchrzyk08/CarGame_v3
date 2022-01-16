@@ -22,4 +22,12 @@ bool BadObject::wave(int value = 150) {
     return true;
 }
 
+bool BadObject::blast(int x, int y, SDL_Rect blastBox) {
+    if (this->collide(blastBox))
+        this->setDead();
+        return true;
+    return false;
+
+}
+
 int BadObject::instances = 0;

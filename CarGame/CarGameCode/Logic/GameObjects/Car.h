@@ -45,7 +45,7 @@ public:
     int getPower() { return power_; }
     int getCoinsNumber() { return coins; } 
 
-    void gotHit();
+    void gotHit(int harm);
     void gotPower();
     void gotCoin();
     void gotOil();

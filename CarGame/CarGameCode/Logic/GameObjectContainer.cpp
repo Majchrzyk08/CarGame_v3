@@ -29,6 +29,7 @@ void GameObjectContainer::removeDead() {
 	int i = 0;
 	while (i < gameObjects.size()) {
 		if (gameObjects[i]->toDelete()) {
+			gameObjects[i]->onDelete();
 			delete gameObjects[i];
 			gameObjects[i] = nullptr;
 			gameObjects.erase(gameObjects.begin() + i);

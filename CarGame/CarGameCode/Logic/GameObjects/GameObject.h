@@ -3,10 +3,11 @@ STEPS CUANDO CREO NUEVO OBJETO:
 Jak dodajemy obiekt to co trzeba zrobic:
 -dodac do texture containera i zmienic liczbe tekstur
 -stworzyc w gameObjectGenerator
--dac include w game.h
+-dac include w Objects.h
 -zmienic konstruktor gry w game.h i game.cpp
 -w startGame modyfikacja wywowalnia generare
 -w Mainie zdefiniowac ile ma sie stworzyc
+-**dodac do cheatcommands**
 */
 
 
@@ -44,6 +45,7 @@ public:
     virtual bool toDelete(){return false;}
     virtual void onEnter(){};
     virtual void onDelete(){};
+    virtual void setDead(){};
 
     void setPosition(double x, double y);
     void setDimension(double width, double height);

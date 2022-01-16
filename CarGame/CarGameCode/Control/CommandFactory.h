@@ -1,14 +1,7 @@
 #ifndef CARGAME_COMMANDFACTORY_H
 #define CARGAME_COMMANDFACTORY_H
 
-#include "Commands/QuitCommand.h"
-#include "Commands/MoveCommand.h"
-#include "Commands/DebugCommand.h"
-#include "Commands/HelpCommand.h"
-#include "Commands/AccCommand.h"
-#include "Commands/StartCommand.h"
-#include "Commands/ShootCommand.h"
-#include "Commands/WaveCommand.h"
+#include "Commands//commands.h"
 #include <vector>
 
 class CommandFactory {

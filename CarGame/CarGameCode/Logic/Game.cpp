@@ -5,7 +5,9 @@
 #include "Game.h"
 #include "GameObjects/Bullet.h"
 
-Game::Game(string name, int width, int height, int roadLength, int obstacles, int powerups, int coins, int turbos, int superRocks, int oils) {
+    //# You don't really need all the parameters... we will put them in the levels
+
+Game::Game(string name, int width, int height, int roadLength, int obstacles, int powerups, int coins, int turbos, int superRocks, int oils, int trucks) {
     this->name = name;
     this->roadLength = roadLength;
     this->width = width;
@@ -18,6 +20,7 @@ Game::Game(string name, int width, int height, int roadLength, int obstacles, in
     nTurbos = turbos;
     nSuperRocks = superRocks;
     nOils = oils;
+    nTrucks = trucks;
     record_ = 0;
 }
 
@@ -30,7 +33,7 @@ void Game::startGame() {
     container->add(goal_);
     car = new Car(this); car->setDimension(CAR_WIDTH, CAR_HEIGHT); car->setPosition(car->getWidth(), height/ 2.0);
     container->add(car);
-    GameObjectGenerator::generate(this, nObstacles_, nPowerups, nCoins, nTurbos, nSuperRocks, nOils);
+    GameObjectGenerator::generate(this, nObstacles_, nPowerups, nCoins, nTurbos, nSuperRocks, nOils, nTrucks);
 }
 
 string Game::getGameName() {
@@ -140,11 +143,21 @@ bool Game::isRebased(GameObject* go) {
 }
 
 void Game::carUpNdown(int i) {
-    if(car!=nullptr) car->upNdown(i);
+
+    //# car should never be nullptr... so don't hide the error. It's better to get an error and correct it.
+    //if(car!=nullptr) ok - not hided anymore
+        car->upNdown(i);
 }
 
 void Game::carAccNdec(int i) {
     if(car!=nullptr) car->accelerateNdecelerate(i);
+}
+
+void Game::deleteAllObjects()
+{
+    for (auto o : container->getGameObjects())
+        o->setDead();
+    
 }
 
 int Game::getXOfTheCar()

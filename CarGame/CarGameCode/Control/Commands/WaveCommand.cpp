@@ -7,7 +7,8 @@ bool WaveCommand::parse(SDL_Event& e) {
 
 void WaveCommand::execute() {
 	if (game->buy(3)) {
-		for each (GameObject* x in game->getGameObjects())
+
+		for each (Collider* x in game->getGameObjects())
 		{
 			x->wave();
 		}

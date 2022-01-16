@@ -13,7 +13,7 @@ int main(int argc, char* argv[]){
     srand(time(NULL));
 
     try {
-        Game* game = new Game("Car game 1.0", 800, 320, 4000, 10, 3, 7, 2, 3, 10);
+        Game* game = new Game("Car game 1.0", 800, 320, 4000, 10, 3, 10, 2, 3, 10, 1);
         ViewController controller(game);
         controller.run();
         delete game;

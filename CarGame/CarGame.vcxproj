@@ -11,6 +11,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="CarGameCode\Control\Commands\BlastCommand.cpp" />
     <ClCompile Include="CarGameCode\Logic\GameObjects\Bullet.cpp" />
     <ClCompile Include="CarGameCode\Control\Commands\AccCommand.cpp" />
     <ClCompile Include="CarGameCode\Control\Commands\DebugCommand.cpp" />
@@ -38,8 +39,13 @@
     <ClCompile Include="CarGameCode\Logic\GameObjects\SuperRock.cpp" />
     <ClCompile Include="CarGameCode\Logic\GameObjects\Oil.cpp" />
     <ClCompile Include="CarGameCode\Control\Commands\WaveCommand.cpp" />
+    <ClCompile Include="CarGameCode\Logic\GameObjects\Truck.cpp" />
+    <ClCompile Include="CarGameCode\Control\Commands\ClearCommand.cpp" />
+    <ClCompile Include="CarGameCode\Control\Commands\CheatCommand.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="CarGameCode\Control\Commands\BlastCommand.h" />
+    <ClInclude Include="CarGameCode\Control\Commands\commands.h" />
     <ClInclude Include="CarGameCode\Logic\GameObjects\Bullet.h" />
     <ClInclude Include="CarGameCode\Control\CommandFactory.h" />
     <ClInclude Include="CarGameCode\Control\Commands\AccCommand.h" />
@@ -59,6 +65,7 @@
     <ClInclude Include="CarGameCode\Logic\GameObjects\GameObject.h" />
     <ClInclude Include="CarGameCode\Logic\GameObjects\GoodObject.h" />
     <ClInclude Include="CarGameCode\Logic\GameObjects\Meta.h" />
+    <ClInclude Include="CarGameCode\Logic\GameObjects\objects.h" />
     <ClInclude Include="CarGameCode\Logic\GameObjects\PowerUp.h" />
     <ClInclude Include="CarGameCode\Logic\GameObjects\Wall.h" />
     <ClInclude Include="CarGameCode\Utils\Vector2D.h" />
@@ -67,6 +74,7 @@
     <ClInclude Include="CarGameCode\View\Infobar.h" />
     <ClInclude Include="CarGameCode\View\Texture.h" />
     <ClInclude Include="CarGameCode\View\TextureContainer.h" />
+    <ClInclude Include="CarGameCode\Control\Commands\CheatCommand.h" />
     <ClInclude Include="checkML.h" />
     <ClInclude Include="CarGameCode\Control\Commands\ShootCommand.h" />
     <ClInclude Include="CarGameCode\Logic\GameObjects\Coin.h" />
@@ -74,6 +82,8 @@
     <ClInclude Include="CarGameCode\Logic\GameObjects\SuperRock.h" />
     <ClInclude Include="CarGameCode\Logic\GameObjects\Oil.h" />
     <ClInclude Include="CarGameCode\Control\Commands\WaveCommand.h" />
+    <ClInclude Include="CarGameCode\Logic\GameObjects\Truck.h" />
+    <ClInclude Include="CarGameCode\Control\Commands\ClearCommand.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="CarGameCode\Images\barrel.png" />
